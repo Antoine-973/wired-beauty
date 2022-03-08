@@ -11,7 +11,7 @@
 ###< symfony/framework-bundle ###
 
 ###> symfony/webpack-encore-bundle ###
-# node_modules
+node_modules
 /symfony/public/build/
 /symfony/webpack/npm-debug.log
 /symfony/webpack/yarn-error.log

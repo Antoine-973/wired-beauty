@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Account request{% endblock %}
+
+{% block body %}
+    <div class="p-5 w-75 mx-auto">
+        <div class="text-center mb-5">
+            <h1 class="wb-text-48 text-uppercase">Account Request</h1>
+            <h2 class="wb-text-36">— Scientist —</h2>
+        </div>
+
+        <p class="mb-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a nec vitae integer libero pharetra.
+            Imperdiet
+            tempor quam at sit. Dignissim nulla morbi sodales iaculis lacus ut mollis fermentum commodo.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a nec vitae integer libero pharetra.
+        </p>
+
+        {{ include('account_request/_form.html.twig') }}
+    </div>
+{% endblock %}

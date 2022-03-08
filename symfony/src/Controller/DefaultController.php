@@ -8,12 +8,12 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Config\Definition\Exception\Exception;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-#[Route('/react')]
+#[Route('/')]
 class DefaultController extends AbstractController
 {
     #[Route('/', name: 'react_index', methods: ['GET'])]
     public function index(): Response
     {
-        return $this->render('react/index.html.twig');
+        return $this->render('react/index.html.twig', [ 'test' => 3]);
     }
 }

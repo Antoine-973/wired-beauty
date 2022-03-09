@@ -1,4 +1,4 @@
-import react, { useEffect, useState} from 'react';
+import React, { useEffect, useState} from 'react';
 import GraphItem from '../GraphItem/GraphItem';
 import * as XLSX from 'xlsx';
 import PDFDocument from '../PDFDocument/PDFDocument.jsx';

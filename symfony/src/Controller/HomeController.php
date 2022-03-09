@@ -12,7 +12,7 @@ class HomeController extends AbstractController
     #[Route('', name: 'home_index', methods: ['GET'])]
     public function index(): Response
     {
-        return $this->render('react/index.html.twig');
+        return $this->render('home.html.twig');
     }
 
     #[Route('/our-story', name: 'our_story_index', methods: ['GET'])]
@@ -31,5 +31,11 @@ class HomeController extends AbstractController
     public function our_team(): Response
     {
         return $this->render('our_team.html.twig');
+    }
+
+    #[Route('/excel', name: 'excel_parser', methods: ['GET'])]
+    public function excelParser(): Response
+    {
+        return $this->render('react/index.html.twig');
     }
 }

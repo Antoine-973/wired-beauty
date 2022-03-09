@@ -1,3 +1,4 @@
+import React from 'react';
 import GraphItem from "../GraphItem/GraphItem"
 
 export default function PDFContent({data, productsList}){

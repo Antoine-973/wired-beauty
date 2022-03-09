@@ -1,4 +1,4 @@
-import react, { useEffect, useState} from 'react';
+import React, { useEffect, useState} from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
 
 const COLORS = [

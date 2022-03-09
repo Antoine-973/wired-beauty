@@ -1,4 +1,4 @@
-// import kendoka from './react-kendoka.png';
+import React from 'react';
 import { PDFExport, savePDF } from '@progress/kendo-react-pdf';
 import { useRef } from 'react';
 import Logo from '../../assets/images/logo.png';

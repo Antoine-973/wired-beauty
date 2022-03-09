@@ -21,6 +21,10 @@ class UserFixtures extends Fixture
          $scientist = (new User())
              ->setEmail('scientist@scientist.com')
              ->setRoles(['ROLE_SCIENTIST'])
+             ->setFirstname('Scientist')
+             ->setLastname('Scientist')
+             ->setPhone('+33 7 57 13 09 36')
+             ->setCompany('SCIENTIST CORP')
          ;
          $scientist->setPassword($this->userPasswordHasher->hashPassword($scientist, 'test'));
          $manager->persist($scientist);
@@ -28,8 +32,12 @@ class UserFixtures extends Fixture
          $manager->flush();
 
          $admin = (new User())
-             ->setEmail('admin@wired-technologies.com')
+             ->setEmail('admin@wired-beauty.com')
              ->setRoles(['ROLE_ADMIN'])
+             ->setFirstname('Admin')
+             ->setLastname('Admin')
+             ->setPhone('+33 7 57 13 09 36')
+             ->setCompany('Wired Beauty Technologies')
          ;
          $admin->setPassword($this->userPasswordHasher->hashPassword($admin, 'test'));
          $manager->persist($admin);
@@ -39,6 +47,10 @@ class UserFixtures extends Fixture
         $client = (new User())
             ->setEmail('client@client.com')
             ->setRoles(['ROLE_CLIENT'])
+            ->setFirstname('Client')
+            ->setLastname('Client')
+            ->setPhone('+33 7 57 13 09 36')
+            ->setCompany("L'Oreal")
         ;
         $client->setPassword($this->userPasswordHasher->hashPassword($client, 'test'));
         $manager->persist($client);
@@ -46,8 +58,11 @@ class UserFixtures extends Fixture
         $manager->flush();
 
          $tester = (new User())
-              ->setEmail('tester@tester.com')
-              ->setRoles(['ROLE_TESTER'])
+             ->setEmail('tester@tester.com')
+             ->setRoles(['ROLE_TESTER'])
+             ->setFirstname('Tester')
+             ->setLastname('Tester')
+             ->setPhone('+33 7 57 13 09 36')
          ;
          $tester->setPassword($this->userPasswordHasher->hashPassword($tester, 'test'));
          $manager->persist($tester);

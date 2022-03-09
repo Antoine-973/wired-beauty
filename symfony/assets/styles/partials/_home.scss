@@ -1,0 +1,25 @@
+#about-cover {
+  overflow: hidden;
+
+  div:first-child {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 530px;
+  }
+
+  div:last-child {
+    height: 530px;
+  }
+}
+
+.space {
+  height: 80px;
+}
+
+.list-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 300px;
+}

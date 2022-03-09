@@ -1,0 +1,17 @@
+.wb-text-primary {
+  color: $dark_green;
+}
+
+.wb-text-secondary {
+  color: $light_green;
+}
+
+.wb-text-white {
+  color: white;
+}
+
+@for $i from 8 through 60 {
+  .wb-text-#{$i} {
+    font-size: #{$i}px;
+  }
+}

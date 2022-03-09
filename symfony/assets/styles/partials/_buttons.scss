@@ -1,0 +1,22 @@
+.wb-btn-primary {
+  background-color: $light_green;
+  border-radius: 14px;
+  color: white;
+  padding: 5px 12px;
+
+  &:hover {
+    color: white !important;
+  }
+}
+
+.wb-btn-outline {
+  background-color: white;
+  border: solid 1px $light_green;
+  border-radius: 14px;
+  color: $light_green;
+  padding: 5px 12px;
+
+  &:hover {
+    color: $light_green;
+  }
+}

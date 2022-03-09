@@ -1,0 +1,20 @@
+// Montserrat
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+// Lausanne
+@font-face {
+  font-family: 'Lausanne Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lausanne Regular'),
+  url('../fonts/Lausanne-Regular.otf') format('otf');
+  font-display: swap;
+}
+
+.text-font-primary {
+  font-family: 'Lausanne Regular', sans-serif !important;
+}
+
+.text-font-secondary {
+  font-family: 'Montserrat', sans-serif !important;
+}

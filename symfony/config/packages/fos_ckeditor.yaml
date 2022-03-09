@@ -1,0 +1,52 @@
+# Read the documentation: https://symfony.com/doc/current/bundles/FOSCKEditorBundle/index.html
+
+twig:
+    form_themes:
+        - '@FOSCKEditor/Form/ckeditor_widget.html.twig'
+fos_ck_editor:
+    default_config: baseConfig
+    configs:
+        baseConfig:
+            toolbar: "full"
+            disallowedContent: ['script', '*[on*]']
+            language: fr
+            protectedSource: ['/\{\%%[\s\S]*?\%%\}/g', '/\{\#[\s\S]*?\#\}/g', '/{.*\".*}/g']
+    toolbars:
+      items:
+        full.about: []
+        full.basic_styles: [
+        'Bold',
+        'Italic',
+        'Underline',
+        'Strike',
+        'Subscript',
+        'Superscript',
+        '-',
+        'RemoveFormat',
+        ]
+        full.clipboard: ['Cut', 'Copy', 'Paste', 'PasteText', '-', 'Undo', 'Redo']
+        full.colors: []
+        full.document: [ '-', 'NewPage', 'Preview', 'Print', '-', 'Templates']
+        full.editing: ['Find', 'Replace', '-', 'SelectAll', '-', 'Scayt']
+        full.forms: []
+        full.insert: ['Image', 'Flash', 'Table', 'HorizontalRule', 'SpecialChar', 'PageBreak', 'Iframe']
+        full.links: ['Link', 'Unlink']
+        full.paragraph: [
+        'NumberedList',
+        'BulletedList',
+        '-',
+        'Outdent',
+        'Indent',
+        '-',
+        'Blockquote',
+        '-',
+        'JustifyLeft',
+        'JustifyCenter',
+        'JustifyRight',
+        'JustifyBlock',
+        '-',
+        'BidiLtr',
+        'BidiRtl',
+        ]
+        full.styles: ['Styles', 'Format', 'Font', 'FontSize', 'TextColor', 'BGColor']
+        full.tools: ['Maximize', 'ShowBlocks']

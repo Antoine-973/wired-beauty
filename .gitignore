@@ -19,3 +19,4 @@ node_modules
 ###< symfony/webpack-encore-bundle ###
 
 .env
+.DS_Store

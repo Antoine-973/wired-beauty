@@ -1,0 +1,36 @@
+.report-step-1{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+
+    h3{
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+
+    input, textarea, select{
+        margin-bottom: 20px;
+        outline: none;
+        resize: none;
+    }
+
+    .report-step-1-switch{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 20px;
+        span{
+            margin-right: 10px;
+        }
+    }
+
+    .report-step-1-buttons{
+        margin-top: 10px;
+        display: flex;
+        justify-content: flex-end;
+
+        button{
+            margin-left: 10px;
+        }
+    }
+}

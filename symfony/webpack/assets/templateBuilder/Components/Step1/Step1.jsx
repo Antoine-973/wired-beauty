@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import Switch from "react-switch";
+import './Step1.scss';
 
-export default function Step1({data, goNext}){
+export default function Step1({data, goNext, cancel}){
     const [ columns, setColumns ]           = useState([null, null, null]);
     const [ selected, setSelected ]         = useState([]);
     const [ advancedMode, setAdvancedMode ] = useState(false);
@@ -59,31 +60,39 @@ export default function Step1({data, goNext}){
     }, [data])
 
     return(
-        <div style={{display: 'flex', flexDirection: 'column', width: '30%'}}>
+        <div className='report-step-1'>
             <h3>What graphics do you want to create ?</h3>
+            <label className='required'>Graphic title</label>
             <input
+                className='report-maker-input'
                 placeholder='Graphic title'
                 value={details?.title}
                 onChange={e => setDetails({ ...details, title: e.target.value})}
                 type="text" />
+            <label>Description</label>
             <textarea
+                className='report-maker-input'
                 placeholder='Some description'
                 value={details?.description}
                 onChange={e => setDetails({ ...details, description: e.target.value})}
                 type="text" />
-            <label>
+
+            <div className='report-step-1-switch'>
                 <span>Use 3 parameters</span>
                 <Switch
+                    offColor={'#13667A'}
+                    onColor={'#13667A'}
                     height={16}
                     width={33}
                     onChange={() => setAdvancedMode(!advancedMode)} 
                     checked={advancedMode} />
-            </label>
+            </div>
             
                 
-            <p>Select which column contains what you want to put in X AXIS</p>
+            <label>Select which column contains what you want to put in X AXIS</label>
             { columns.length > 0 && 
-                <select defaultValue={-1} 
+                <select defaultValue={-1}
+                        className='report-maker-input'
                         value={selected[0]} 
                         onChange={e => selectCol(e.target.value, 0)}>
                     <option value={-1} disabled>X Axis</option>
@@ -93,8 +102,9 @@ export default function Step1({data, goNext}){
 
             { (selected[0] !== null && selected[0] !== undefined) && 
                 <>
-                    <p>Y AXIS is</p>
+                    <label>Y AXIS is</label>
                     <select defaultValue={-1} 
+                        className='report-maker-input'
                         value={selected[1]} 
                         onChange={e => selectCol(e.target.value, 1)}>
                         <option value={-1} disabled>Y Axis</option>
@@ -105,8 +115,9 @@ export default function Step1({data, goNext}){
 
             { advancedMode && (selected[1] !== null && selected[1] !== undefined) && 
                 <>
-                    <p>Filter with</p>
+                    <label>Filter with</label>
                     <select defaultValue={-1}
+                        className='report-maker-input'
                         value={selected[2]} 
                         onChange={e => selectCol(e.target.value, 2)}>
                         <option value={-1} disabled>Filter</option>
@@ -114,9 +125,17 @@ export default function Step1({data, goNext}){
                     </select>
                 </>
             }
-            <div style={{marginTop: '10px'}}>
-                <button onClick={goToNext}>Ok</button>
-                <button onClick={newGraph}>Add another one</button>
+
+            <div className='report-step-1-buttons'>
+                <button 
+                    className='report-maker-btn-empty'
+                    onClick={cancel}>CANCEL</button>
+                <button 
+                    className='report-maker-btn-empty'
+                    onClick={newGraph}>ADD ANOTHER ONE</button>
+                <button
+                    className='report-maker-btn'
+                    onClick={goToNext}>NEXT</button>
             </div>
         </div>
     )

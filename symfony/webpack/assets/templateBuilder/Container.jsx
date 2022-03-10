@@ -24,6 +24,7 @@ export default function Container(){
                         excelData={excelData}/>
         case 1:
             return <Step1 
+                        cancel={() => { setExcelData(null); setStudyInfo({}); setStep(0); }}
                         data={excelData} 
                         goNext={ data => {setConfigs(data); setStep(2)}}/>
         case 0:

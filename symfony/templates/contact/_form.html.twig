@@ -1,4 +1,17 @@
 {{ form_start(form) }}
-    {{ form_widget(form) }}
+
+<div class="row">
+    <div class="col-6 d-flex flex-column">
+        {{ form_row(form.first_name) }}
+        {{ form_row(form.last_name) }}
+        {{ form_row(form.email) }}
+        {{ form_row(form.phone) }}
+    </div>
+    <div class="col-6 d-flex flex-column" id="contact-form">
+        {{ form_row(form.subject) }}
+        {{ form_row(form.message, {'attr': {'class': 'h-100'}}) }}
+    </div>
+</div>
+
 <button class="btn wb-btn-primary">{{ button_label|default('Request') }}</button>
 {{ form_end(form) }}

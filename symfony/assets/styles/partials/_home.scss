@@ -5,11 +5,16 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 530px;
+    height: 600px;
   }
 
   div:last-child {
-    height: 530px;
+    height: 600px;
+
+    img {
+      object-fit: cover;
+      height: 100%;
+    }
   }
 }
 
@@ -22,4 +27,24 @@
   flex-direction: column;
   justify-content: center;
   min-height: 300px;
+}
+
+
+.team-card {
+  min-height: 500px;
+}
+
+#mapo-open {
+  transform: translateY(80%);
+}
+
+#loginPage {
+  form {
+    width: 30vw;
+  }
+
+  img {
+    //max-height: 50vh;
+    object-fit: cover;
+  }
 }

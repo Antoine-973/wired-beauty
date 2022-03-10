@@ -20,12 +20,6 @@ class Article
     #[ORM\Column(type: 'string', length: 200)]
     private $title;
 
-    /**
-     * @var string|null
-     *
-     * @Gedmo\Slug(fields={"title", "code"})
-     * @ORM\Column(length=128, unique=true)
-     */
     #[ORM\Column(length: 128, unique: true)]
     #[Gedmo\Slug(fields: ['title'])]
     private $slug;
@@ -37,11 +31,6 @@ class Article
     #[ORM\JoinColumn(nullable: false)]
     #[Gedmo\Blameable(on: 'create')]
     private $createdBy;
-
-    #[ORM\ManyToOne(targetEntity: User::class, inversedBy: 'articles')]
-    #[ORM\JoinColumn(nullable: false)]
-    #[Gedmo\Blameable(on: 'update')]
-    private $updatedBy;
 
     public function getId(): ?int
     {

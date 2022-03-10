@@ -15,7 +15,7 @@ use Symfony\Component\Routing\Annotation\Route;
 #[Route('/contact')]
 class ContactController extends AbstractController
 {
-    #[Route('/', name: 'app_contact_index', methods: ['GET', 'POST'])]
+    #[Route('/', name: 'contact_index', methods: ['GET', 'POST'])]
     public function index(Request $request): Response
     {
         $contact = new ContactRequest();

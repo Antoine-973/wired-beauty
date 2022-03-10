@@ -51,15 +51,13 @@ class AppCustomAuthenticator extends AbstractLoginFormAuthenticator
 
         if (in_array("ROLE_ADMIN", $token->getRoleNames())) {
             return new RedirectResponse($this->urlGenerator->generate('app_admin_dashboard'));
-        }
-        elseif(in_array("ROLE_SCIENTIST", $token->getRoleNames())) {
-            return new RedirectResponse($this->urlGenerator->generate('react_index'));
-        }
-        elseif (in_array("ROLE_CLIENT", $token->getRoleNames())) {
-            return new RedirectResponse($this->urlGenerator->generate('react_index'));
+        } elseif (in_array("ROLE_SCIENTIST", $token->getRoleNames())) {
+            return new RedirectResponse($this->urlGenerator->generate('home_index'));
+        } elseif (in_array("ROLE_CLIENT", $token->getRoleNames())) {
+            return new RedirectResponse($this->urlGenerator->generate('home_index'));
         }
 
-        return new RedirectResponse($this->urlGenerator->generate('react_index'));
+        return new RedirectResponse($this->urlGenerator->generate('home_index'));
     }
 
     protected function getLoginUrl(Request $request): string

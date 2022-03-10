@@ -24,3 +24,9 @@ label {
 input, textarea {
   border: solid 1px $dark_green;
 }
+
+#contact-form {
+  div:first-child {
+    flex: 0;
+  }
+}

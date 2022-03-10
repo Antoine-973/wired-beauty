@@ -27,7 +27,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(type: 'string')]
     private $password;
 
-    #[ORM\OneToMany(mappedBy: 'created_by', targetEntity: Article::class, orphanRemoval: true)]
+    #[ORM\OneToMany(mappedBy: 'createdBy', targetEntity: Article::class, orphanRemoval: true)]
     private $articles;
 
     #[ORM\Column(type: 'string', length: 30)]
@@ -71,7 +71,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     public function getUserIdentifier(): string
     {
-        return (string) $this->email;
+        return (string)$this->email;
     }
 
     /**

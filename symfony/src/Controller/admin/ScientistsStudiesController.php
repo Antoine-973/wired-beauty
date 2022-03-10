@@ -2,6 +2,7 @@
 
 namespace App\Controller\admin;
 
+use Doctrine\ORM\EntityManagerInterface;
 use App\Form\ScientistStudyType;
 use App\Entity\ScientistStudy;
 use App\Repository\ScientistStudyRepository;
@@ -24,14 +25,18 @@ class ScientistsStudiesController extends AbstractController
     }
 
     #[Route('/new', name: 'app_scientists_studies_new', methods: ['GET', 'POST'])]
-    public function newStudy( ScientistStudyRepository $SSRepository, Request $request ): Response
+    public function newStudy( ScientistStudyRepository $SSRepository, Request $request, EntityManagerInterface $entityManager ): Response
     {
         $study = new ScientistStudy();
         $form = $this->createForm(ScientistStudyType::class, $study);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $SSRepository->add($study);
+            //dd( $study );
+            //$SSRepository->add($study);
+            $entityManager->persist($study);
+            $entityManager->flush();
+
             return $this->redirectToRoute('app_scientists_studies_index', [], Response::HTTP_SEE_OTHER);
         }
 
@@ -44,6 +49,7 @@ class ScientistsStudiesController extends AbstractController
     #[Route('/{id}', name: 'app_scientists_studies_show', methods: ['GET'])]
     public function show( ScientistStudy $study ): Response
     {
+        dd($study);
         return $this->render('admin/scientists_studies/show.html.twig', [
             'study' => $study,
         ]);

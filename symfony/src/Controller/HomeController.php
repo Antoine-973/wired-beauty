@@ -32,4 +32,10 @@ class HomeController extends AbstractController
     {
         return $this->render('our_team.html.twig');
     }
+
+    #[Route('/excel', name: 'excel_parser', methods: ['GET'])]
+    public function excelParser(): Response
+    {
+        return $this->render('react/index.html.twig');
+    }
 }

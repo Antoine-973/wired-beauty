@@ -1,6 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Home from './components/Home';
+import React, { useEffect, useState } from 'react';
+// import './App.css';
+// import Uploader from './Components/Uploader/Uploader';
+import Container from './Container';
 
-ReactDOM.render(<Home/>, document.getElementById('template-builder'));
+function App() {
+  return(
+    <Container/>
+  )
+};
 
+export default App;

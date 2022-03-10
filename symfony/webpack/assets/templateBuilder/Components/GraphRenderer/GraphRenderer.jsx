@@ -15,10 +15,6 @@ export default function GraphRenderer({graphData = []}){
         }
     };
 
-    useEffect(()=>{
-        console.log(graphData)
-    }, []);
-
     return(
         <>
             {graphData.length > 0 && 

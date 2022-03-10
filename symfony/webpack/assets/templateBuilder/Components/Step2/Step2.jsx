@@ -95,10 +95,6 @@ export default function Step2({configs, excelData, studyDetails}){
         }
     }, [excelRows]);
 
-    useEffect(()=>{
-        console.log(studyDetails);
-    }, []);
-
     return(
         <div style={{display: 'flex', flexDirection: 'column', width: '30%'}}>
             <h3>Step 3</h3>

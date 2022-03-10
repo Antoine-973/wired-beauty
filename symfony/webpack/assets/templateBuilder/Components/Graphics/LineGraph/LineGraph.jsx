@@ -7,7 +7,6 @@ const COLORS = [
 
 export default function LineGraph({data}){
   
-    console.log(data)
     return(
         <div style={{ width: '500px'}}>
          <ResponsiveContainer height='100%' width='100%' aspect={1/0.5}>

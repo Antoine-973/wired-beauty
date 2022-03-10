@@ -60,14 +60,16 @@ export default function Step0({goNext}){
                     onChange={handleChange}
                     />
             :
-                <div>
+                <div style={{ width: '300px', display: 'flex', flexDirection: 'column'}}>
                     <input
+                        style={{width: '100%'}}
                         placeholder='Title used for the front page'
                         type="text" 
                         value={details?.title}
                         onChange={ e => setDetails({ ...details, title: e.target.value})}
                         />
-                    <input 
+                    <textarea
+                        style={{width: '100%'}}
                         type="text" 
                         placeholder='Sub title figuring in the second page'
                         value={details?.subTitle}

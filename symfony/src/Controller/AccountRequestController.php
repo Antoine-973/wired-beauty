@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\AccountRequest;
 use App\Form\AccountRequestType;
 use App\Repository\AccountRequestRepository;
+use App\Repository\UserRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -21,7 +22,7 @@ class AccountRequestController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $accountRequest->setType("PRO");
+            $accountRequest->setType("CLIENT");
             $accountRequestRepository->add($accountRequest);
             return $this->redirectToRoute('account_request_pro_index', [], Response::HTTP_SEE_OTHER);
         }
@@ -52,16 +53,18 @@ class AccountRequestController extends AbstractController
     }
 
     #[Route('/panelists', name: 'account_request_panelists_index', methods: ['GET', 'POST'])]
-    public function panelists_index(Request $request, AccountRequestRepository $accountRequestRepository): Response
+    public function panelists_index(Request $request, AccountRequestRepository $accountRequestRepository, UserRepository $userRepository): Response
     {
         $accountRequest = new AccountRequest();
         $form = $this->createForm(AccountRequestType::class, $accountRequest);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $accountRequest->setType("PANELISTS");
-            $accountRequestRepository->add($accountRequest);
-            return $this->redirectToRoute('account_request_panelists_index', [], Response::HTTP_SEE_OTHER);
+            if (!$userRepository->findBy(['email' => $form->getData()->getEmail()])){
+                $accountRequest->setType("TESTER");
+                $accountRequestRepository->add($accountRequest);
+                return $this->redirectToRoute('account_request_panelists_index', [], Response::HTTP_SEE_OTHER);
+            }
         }
 
         return $this->renderForm('account_request/panelists.html.twig', [

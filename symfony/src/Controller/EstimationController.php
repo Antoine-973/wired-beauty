@@ -15,10 +15,10 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/estimation')]
+#[Route('/{_locale<%app.supported_locales%>}/estimation')]
 class EstimationController extends AbstractController
 {
-    #[Route('/', name: 'estimation_index', methods: ['GET', 'POST'])]
+    #[Route('', name: 'estimation_index', methods: ['GET', 'POST'])]
     public function index(Request $request, EstimationRequestRepository $estimationRepository): Response
     {
         $estimation = new EstimationRequest();

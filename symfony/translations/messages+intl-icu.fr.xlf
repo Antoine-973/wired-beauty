@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="3e5hbvu" resname="our story">
+        <source>our story</source>
+        <target>notre histoire</target>
+      </trans-unit>
+      <trans-unit id="9BFgAt1" resname="about us">
+        <source>about us</source>
+        <target>à propos de nous</target>
+      </trans-unit>
+      <trans-unit id="pRFG04B" resname="lab">
+        <source>lab</source>
+        <target>lab</target>
+      </trans-unit>
+      <trans-unit id="J8.AAmT" resname="our technologies">
+        <source>our technologies</source>
+        <target>nos technologies</target>
+      </trans-unit>
+      <trans-unit id="AlLtLhL" resname="studies services">
+        <source>studies services</source>
+        <target>services d'études</target>
+      </trans-unit>
+      <trans-unit id="fKDytjN" resname="scientific validation">
+        <source>scientific validation</source>
+        <target>validation scientifique</target>
+      </trans-unit>
+      <trans-unit id="0FJ_Sz1" resname="Logout">
+        <source>Logout</source>
+        <target>Déconnexion</target>
+      </trans-unit>
+      <trans-unit id="mLZwY8_" resname="Contact Us">
+        <source>Contact Us</source>
+        <target>Nous contacter</target>
+      </trans-unit>
+      <trans-unit id="tt.jOEH" resname="estimation">
+        <source>estimation</source>
+        <target>devis</target>
+      </trans-unit>
+      <trans-unit id="6T7sRgy" resname="how can we help?">
+        <source>how can we help?</source>
+        <target>comment pouvons-nous aider ?</target>
+      </trans-unit>
+      <trans-unit id="nvINB0X" resname="our beliefs values and spirits">
+        <source>our beliefs values and spirits</source>
+        <target>notre vision, nos valeurs et notre esprit</target>
+      </trans-unit>
+      <trans-unit id="_JyChh2" resname="our beliefs">
+        <source>our beliefs</source>
+        <target>notre vision</target>
+      </trans-unit>
+      <trans-unit id="Gq05UIc" resname="IOT can save R&amp;D money and speed-up product launch tempo">
+        <source>IOT can save R&amp;D money and speed-up product launch tempo</source>
+        <target>L'informatique peut faire économiser de l'argent à la R&amp;D et accélérer le rythme de lancement des produits.</target>
+      </trans-unit>
+      <trans-unit id="YQ15z3D" resname="Repeatability of protocols increases reliability of results">
+        <source>Repeatability of protocols increases reliability of results</source>
+        <target>La répétabilité des protocoles augmente la fiabilité des résultats</target>
+      </trans-unit>
+      <trans-unit id="3pkiKlx" resname="Data Science can help cosmetic scientists">
+        <source>Data Science can help cosmetic scientists</source>
+        <target>La science des données peut aider les scientifiques cosmétiques</target>
+      </trans-unit>
+      <trans-unit id="PDTiOPS" resname="values and spirit">
+        <source>values and spirit</source>
+        <target>valeurs et esprit</target>
+      </trans-unit>
+      <trans-unit id="6xBvADV" resname="Since the beginning, Wired Beauty has had 1 mission : bring evidence-based results to their clients rather&#10;            than administer classical surveys.&#10;            Hence the digitally enabled solutions. We have a strong entrepreneurial culture and constantly innovate to&#10;            find new claims, data, new proofs and reduce the R&amp;D cost and tempo.&#10;            We aim to have a real impact on how consumers see brand performance. To help our clients, we establish new&#10;            norms of excellence in cosmetic research.">
+        <source>Since the beginning, Wired Beauty has had 1 mission : bring evidence-based results to their clients rather
+            than administer classical surveys.
+            Hence the digitally enabled solutions. We have a strong entrepreneurial culture and constantly innovate to
+            find new claims, data, new proofs and reduce the R&amp;D cost and tempo.
+            We aim to have a real impact on how consumers see brand performance. To help our clients, we establish new
+            norms of excellence in cosmetic research.</source>
+        <target>Depuis le début, Wired Beauty s'est fixé une mission : apporter à ses clients des résultats fondés sur des preuves plutôt que d'administrer des enquêtes classiques.
+                         D'où les solutions numériques. Nous avons une forte culture entrepreneuriale et innovons constamment pour trouver de nouvelles revendications, de nouvelles données, de nouvelles preuves et réduire les coûts et le temps de recherche et de développement.
+                         Notre objectif est d'avoir un impact réel sur la façon dont les consommateurs perçoivent la performance des marques. Pour aider nos clients, nous établissons de nouvelles normes d'excellence dans la recherche cosmétique.</target>
+      </trans-unit>
+      <trans-unit id="LtbHlzp" resname="client passion">
+        <source>client passion</source>
+        <target>la passion du client</target>
+      </trans-unit>
+      <trans-unit id="tFuSCJP" resname="We focus on results with professionalism and constantly respect ethical codes.">
+        <source>We focus on results with professionalism and constantly respect ethical codes.</source>
+        <target>Nous nous concentrons sur les résultats avec professionnalisme et respectons constamment les codes éthiques.</target>
+      </trans-unit>
+      <trans-unit id="uLfQGeO" resname="We listen, we deliver.">
+        <source>We listen, we deliver.</source>
+        <target>Nous écoutons, nous livrons.</target>
+      </trans-unit>
+      <trans-unit id="59PBByU" resname="We help our clients succeed.">
+        <source>We help our clients succeed.</source>
+        <target>Nous aidons nos clients à réussir.</target>
+      </trans-unit>
+      <trans-unit id="s2fqRl2" resname="integrity and openess">
+        <source>integrity and openess</source>
+        <target>intégrité et ouverture</target>
+      </trans-unit>
+      <trans-unit id="AnxB3rK" resname="We say things as they are and research new frontiers open-mindedly.">
+        <source>We say things as they are and research new frontiers open-mindedly.</source>
+        <target>Nous disons les choses telles qu'elles sont et recherchons les nouvelles frontières avec ouverture d'esprit.</target>
+      </trans-unit>
+      <trans-unit id="6Pp9ftr" resname="tech and consumer">
+        <source>tech and consumer</source>
+        <target>technologies et consommateurs</target>
+      </trans-unit>
+      <trans-unit id="jbbRuUP" resname="We use technology to better understand consumer needs and life style as well as skin&#10;                        reactions.">
+        <source>We use technology to better understand consumer needs and life style as well as skin
+                        reactions.</source>
+        <target>Nous utilisons la technologie pour mieux comprendre les besoins et le style de vie des consommateurs, ainsi que les réactions de la peau.</target>
+      </trans-unit>
+      <trans-unit id="lJBYz4x" resname="We taylor our research to client objectives. In tubo, in vitro, in vivo.">
+        <source>We taylor our research to client objectives. In tubo, in vitro, in vivo.</source>
+        <target>Nous adaptons nos recherches aux objectifs du client. En Tubo, en vitro, en vivo.</target>
+      </trans-unit>
+      <trans-unit id="9kxD3wK" resname="We make it simple and save people time.">
+        <source>We make it simple and save people time.</source>
+        <target>Nous simplifions les choses et faisons gagner du temps aux gens.</target>
+      </trans-unit>
+      <trans-unit id="nj1CoFK" resname="one team">
+        <source>one team</source>
+        <target>une équipe</target>
+      </trans-unit>
+      <trans-unit id="en95tYM" resname="We team up with labs, and their CROs all over the worlds from the concept development or for&#10;                        improved formulae.">
+        <source>We team up with labs, and their CROs all over the worlds from the concept development or for
+                        improved formulae.</source>
+        <target>Nous faisons équipe avec des laboratoires et leurs CROs dans le monde entier, dès le développement du concept ou pour des formules améliorées.</target>
+      </trans-unit>
+      <trans-unit id="P1Wnygs" resname="It feels different to work with us because our pêople are unlike any other">
+        <source>It feels different to work with us because our pêople are unlike any other</source>
+        <target>C'est différent de travailler avec nous parce que notre personnel n'est pas comme les autres.</target>
+      </trans-unit>
+      <trans-unit id="jU6CGsM" resname="We bring new perspectives: mutual trust and speed.">
+        <source>We bring new perspectives: mutual trust and speed.</source>
+        <target>Nous apportons de nouvelles perspectives : confiance mutuelle et rapidité.</target>
+      </trans-unit>
+      <trans-unit id="HWc96cC" resname="beauty science &amp; proofs">
+        <source>beauty science &amp; proofs</source>
+        <target>science de la beauté &amp; preuves</target>
+      </trans-unit>
+      <trans-unit id="yzvrLxP" resname="Wired Beauty as of today is a saas based start-up co-founded by Stanislas and Sophie, two beauty&#10;                    experts">
+        <source>Wired Beauty as of today is a saas based start-up co-founded by Stanislas and Sophie, two beauty
+                    experts</source>
+        <target>Wired Beauty est aujourd'hui une start-up en mode SaaS cofondée par Stanislas et Sophie, deux experts en beauté.
+        experts en beauté</target>
+      </trans-unit>
+      <trans-unit id="emFxQIl" resname="Who become friends while working toghether at l’Oréal.&#10;                    Stanislas initiated the scientific research on electrochemistry and antiox measurement to develop a&#10;                    skincare prescription tool, and launched a first B2C sun prevention tool (mapo solar).">
+        <source>Who become friends while working toghether at l’Oréal.
+                    Stanislas initiated the scientific research on electrochemistry and antiox measurement to develop a
+                    skincare prescription tool, and launched a first B2C sun prevention tool (mapo solar).</source>
+        <target>Qui deviennent amis en travaillant ensemble chez l'Oréal.
+                                    Stanislas a initié la recherche scientifique sur l'électrochimie et la mesure des antioxydants pour développer un outil de prescription de soins.
+                                    outil de prescription de soins de la peau, et a lancé un premier outil de prévention solaire B2C (mapo solar).</target>
+      </trans-unit>
+      <trans-unit id="dZ6yEFK" resname="In 2021, considering the blue ocean of cosmetic market research and the latest demands of consumer&#10;                    on efficiency proofs especially in Asia, the two of them decided to pivot to a 100% B2B Saas&#10;                    company, convinced by the potential of this technology.">
+        <source>In 2021, considering the blue ocean of cosmetic market research and the latest demands of consumer
+                    on efficiency proofs especially in Asia, the two of them decided to pivot to a 100% B2B Saas
+                    company, convinced by the potential of this technology.</source>
+        <target>En 2021, compte tenu de l'océan bleu des études de marché des cosmétiques et des dernières exigences des consommateurs en matière de preuves d'efficacité, en particulier en Asie.
+                                    consommateurs sur les preuves d'efficacité, en particulier en Asie, ils décident de passer à une société Saas 100% B2B, convaincus par le potentiel de cette technologie.
+                                    convaincus par le potentiel de cette technologie.</target>
+      </trans-unit>
+      <trans-unit id="ndS1Qv." resname="As of today, Wired Beauty Technologies has invested 1.3M€ in research on their exclusive IOT, mobile&#10;                    app, algorithand scientific exposome and suncare knowledge partnering with a top-notch consortium">
+        <source>As of today, Wired Beauty Technologies has invested 1.3M€ in research on their exclusive IOT, mobile
+                    app, algorithand scientific exposome and suncare knowledge partnering with a top-notch consortium</source>
+        <target>À ce jour, Wired Beauty Technologies a investi 1,3 million d'euros dans la recherche sur ses connaissances exclusives en matière d'IOT, d'applications mobiles, d'algorithmes, d'exposition et de soins solaires, en partenariat avec un consortium de premier ordre.
+                                    mobile, algorithme et connaissances scientifiques en matière d'exposition et de soins solaires, en partenariat avec un consortium de premier plan.</target>
+      </trans-unit>
+      <trans-unit id="JPJjz75" resname="our team">
+        <source>our team</source>
+        <target>notre équipe</target>
+      </trans-unit>
+      <trans-unit id="wZz.SGz" resname="Wired Beaty Technologies is a three-sided French tech team combining the intelligence of two seasoned&#10;            cosmetic professionals lien vers bio sophie et Stan , the electro chemistry knowledge of our CRO partner in&#10;            Toulouse (Qima : lien vers qima) and the scientific skin expertise of a renowned dermatologist Mrs Tu-ahn&#10;            DUONG lien vers BIO of the Henri Mondor Hospital in Paris. lien vers APHP&#10;            It is the quality of our employees and partners that build the trust we seek.&#10;            Because of their singular competences and contagious energy, they help our clients improve and simplify&#10;            skincare research data.">
+        <source>Wired Beaty Technologies is a three-sided French tech team combining the intelligence of two seasoned
+            cosmetic professionals lien vers bio sophie et Stan , the electro chemistry knowledge of our CRO partner in
+            Toulouse (Qima : lien vers qima) and the scientific skin expertise of a renowned dermatologist Mrs Tu-ahn
+            DUONG lien vers BIO of the Henri Mondor Hospital in Paris. lien vers APHP
+            It is the quality of our employees and partners that build the trust we seek.
+            Because of their singular competences and contagious energy, they help our clients improve and simplify
+            skincare research data.</source>
+        <target>Wired Beaty Technologies est une équipe technologique française tripartite qui combine l'intelligence de deux professionnels chevronnés de la cosmétique, lien vers bio sophie et Stan, et les connaissances en électrochimie de notre partenaire CRO.
+                            lien vers bio sophie et Stan , les connaissances en électrochimie de notre partenaire CRO à Toulouse (Qima : lien vers qima) et l'expertise scientifique de la peau d'une dermatologue renommée Mme Tu-ahn.
+                            Toulouse (Qima : lien vers qima) et l'expertise scientifique de la peau d'une dermatologue renommée Mme Tu-ahn
+                            DUONG lien vers BIO de l'hôpital Henri Mondor à Paris. lien vers APHP
+                            C'est la qualité de nos employés et de nos partenaires qui crée la confiance que nous recherchons.
+                            Grâce à leurs compétences singulières et à leur énergie contagieuse, ils aident nos clients à améliorer et à simplifier les données de recherche sur les soins de la peau.
+                            les données de recherche sur les soins de la peau.</target>
+      </trans-unit>
+      <trans-unit id="GodVqKQ" resname="CEO of Wired Beauty">
+        <source>CEO of Wired Beauty</source>
+        <target>PDG de Wired Beauty</target>
+      </trans-unit>
+      <trans-unit id="evSiIRk" resname="An FMCG corporate life of over 20 years at Colgate-Palmolive &amp; L’Oréal in marketing and general&#10;                management positions in Europe.&#10;                An entrepreneurial life with turn-arounds of a luxury brands backed by Private equity funds for followed&#10;                by 7 years of consulting Lucinda which she founded.&#10;                A passion for entrepreneurship as an impact investor and mentor">
+        <source>An FMCG corporate life of over 20 years at Colgate-Palmolive &amp; L’Oréal in marketing and general
+                management positions in Europe.
+                An entrepreneurial life with turn-arounds of a luxury brands backed by Private equity funds for followed
+                by 7 years of consulting Lucinda which she founded.
+                A passion for entrepreneurship as an impact investor and mentor</source>
+        <target>Une vie d'entreprise dans le secteur des produits de grande consommation de plus de 20 ans chez Colgate-Palmolive &amp; L'Oréal à des postes de marketing et de direction générale en Europe.
+                                         de direction générale en Europe.
+                                         Une vie d'entrepreneuse avec le redressement de marques de luxe soutenues par des fonds de capital-investissement, suivi de 7 années de conseil chez Lucinda qu'elle a fondée.
+                                         suivi de 7 ans de conseil pour la société Lucinda qu'elle a fondée.
+                                         Une passion pour l'entrepreneuriat en tant qu'investisseur d'impact et mentor.</target>
+      </trans-unit>
+      <trans-unit id="i0Lv41r" resname="President of Wired Beauty">
+        <source>President of Wired Beauty</source>
+        <target>Président de Wired Beauty</target>
+      </trans-unit>
+      <trans-unit id="zOLr489" resname="10 years at L’Oréal in marketing and general management positions in Europe.&#10;                An entrepreneurial life in Europe and Asia in dermo-cosmetics (product development and alternative&#10;                retail models) and data / AI.&#10;                A passion for innovation and team ventures.">
+        <source>10 years at L’Oréal in marketing and general management positions in Europe.
+                An entrepreneurial life in Europe and Asia in dermo-cosmetics (product development and alternative
+                retail models) and data / AI.
+                A passion for innovation and team ventures.</source>
+        <target>10 ans chez L'Oréal à des postes de marketing et de direction générale en Europe.
+                                Une vie d'entrepreneur en Europe et en Asie dans la dermo-cosmétique (développement de produits et modèles alternatifs de
+                                modèles de distribution alternatifs) et les données / l'IA.
+                                Une passion pour l'innovation et les aventures d'équipe.</target>
+      </trans-unit>
+      <trans-unit id="zxxgh6B" resname="Scientific Director of QIMA Life Sciences and former CEO of Synelvia">
+        <source>Scientific Director of QIMA Life Sciences and former CEO of Synelvia</source>
+        <target>Directeur scientifique de QIMA Life Sciences et ancien PDG de Synelvia</target>
+      </trans-unit>
+      <trans-unit id="CeO.IWb" resname="Studies Director QIMA Life Sciences Toulouse France since 2018">
+        <source>Studies Director QIMA Life Sciences Toulouse France since 2018</source>
+        <target>Directeur des études QIMA Life Sciences Toulouse France depuis 2018</target>
+      </trans-unit>
+      <trans-unit id="51OrMbH" resname="Dermatologist, APHP, Hôpital Henri Mondor">
+        <source>Dermatologist, APHP, Hôpital Henri Mondor</source>
+        <target>Dermatologue, APHP, Hôpital Henri Mondor</target>
+      </trans-unit>
+      <trans-unit id="HtGa2a1" resname="Trainee at APHP">
+        <source>Trainee at APHP</source>
+        <target>Stagiaire à l'APHP</target>
+      </trans-unit>
+      <trans-unit id="Z3uvVtk" resname="A passion for new technologies, data exploration and communication based on deep analysis.">
+        <source>A passion for new technologies, data exploration and communication based on deep analysis.</source>
+        <target>Une passion pour les nouvelles technologies, l'exploration des données et la communication basée sur une analyse approfondie.</target>
+      </trans-unit>
+      <trans-unit id="6KiDUxl" resname="Edit User">
+        <source>Edit User</source>
+        <target>Modifier l'utilisateur</target>
+      </trans-unit>
+      <trans-unit id="U0M9PNE" resname="back to list">
+        <source>back to list</source>
+        <target>retour à la liste</target>
+      </trans-unit>
+      <trans-unit id="4tClSWj" resname="Delete">
+        <source>Delete</source>
+        <target>Supprimer</target>
+      </trans-unit>
+      <trans-unit id="awzJBNC" resname="Users">
+        <source>Users</source>
+        <target>Utilisateurs</target>
+      </trans-unit>
+      <trans-unit id="lpzL089" resname="Email">
+        <source>Email</source>
+        <target>Email</target>
+      </trans-unit>
+      <trans-unit id="wlM3BVR" resname="Roles">
+        <source>Roles</source>
+        <target>Rôles</target>
+      </trans-unit>
+      <trans-unit id="Kw3N1AA" resname="actions">
+        <source>actions</source>
+        <target>actions</target>
+      </trans-unit>
+      <trans-unit id="HGMzUJ3" resname="show">
+        <source>show</source>
+        <target>afficher</target>
+      </trans-unit>
+      <trans-unit id="JiEhxTc" resname="edit">
+        <source>edit</source>
+        <target>modifier</target>
+      </trans-unit>
+      <trans-unit id="bi6mN7M" resname="No records found">
+        <source>No records found</source>
+        <target>Aucun enregistrement trouvé</target>
+      </trans-unit>
+      <trans-unit id="nz33U6Q" resname="Create new">
+        <source>Create new</source>
+        <target>Créer un nouveau</target>
+      </trans-unit>
+      <trans-unit id="MVJ_u5A" resname="New User">
+        <source>New User</source>
+        <target>Nouvel utilisateur</target>
+      </trans-unit>
+      <trans-unit id="g36VwXo" resname="Create new User">
+        <source>Create new User</source>
+        <target>Créer un nouvel utilisateur</target>
+      </trans-unit>
+      <trans-unit id="tRLZfny" resname="User">
+        <source>User</source>
+        <target>Utilisateur</target>
+      </trans-unit>
+      <trans-unit id="ufq9.am" resname="Edit AccountRequest">
+        <source>Edit AccountRequest</source>
+        <target>Modifier la demande</target>
+      </trans-unit>
+      <trans-unit id="Xaj3_8K" resname="Back to list">
+        <source>Back to list</source>
+        <target>Retour à la liste</target>
+      </trans-unit>
+      <trans-unit id="QGEau92" resname="Validate">
+        <source>Validate</source>
+        <target>Valider</target>
+      </trans-unit>
+      <trans-unit id="U6r4VuN" resname="AccountRequest">
+        <source>AccountRequest</source>
+        <target>Demande de compte</target>
+      </trans-unit>
+      <trans-unit id="EBazCVX" resname="Account Request">
+        <source>Account Request</source>
+        <target>Demande de compte</target>
+      </trans-unit>
+      <trans-unit id="ZHz6kbI" resname="Firstname">
+        <source>Firstname</source>
+        <target>Prénom</target>
+      </trans-unit>
+      <trans-unit id="htiPHRy" resname="Lastname">
+        <source>Lastname</source>
+        <target>Nom</target>
+      </trans-unit>
+      <trans-unit id="Y9zriAC" resname="Phone">
+        <source>Phone</source>
+        <target>Téléphone</target>
+      </trans-unit>
+      <trans-unit id="3kdDyHl" resname="Company">
+        <source>Company</source>
+        <target>Entreprise</target>
+      </trans-unit>
+      <trans-unit id="FHNqLrn" resname="Role">
+        <source>Role</source>
+        <target>Rôle</target>
+      </trans-unit>
+      <trans-unit id="L3dmip3" resname="Message">
+        <source>Message</source>
+        <target>Message</target>
+      </trans-unit>
+      <trans-unit id="S10X_vH" resname="No requests found">
+        <source>No requests found</source>
+        <target>Aucune demande trouvée</target>
+      </trans-unit>
+      <trans-unit id="ls5uYZO" resname="First Name">
+        <source>First Name</source>
+        <target>Prénom</target>
+      </trans-unit>
+      <trans-unit id="9VVjs4a" resname="Last Name">
+        <source>Last Name</source>
+        <target>Nom de famille</target>
+      </trans-unit>
+      <trans-unit id="uq3fcPt" resname="Type">
+        <source>Type</source>
+        <target>Type</target>
+      </trans-unit>
+      <trans-unit id="SuIbMtt" resname="Is valid">
+        <source>Is valid</source>
+        <target>Est valide</target>
+      </trans-unit>
+      <trans-unit id="EzyOuGz" resname="validate">
+        <source>validate</source>
+        <target>valider</target>
+      </trans-unit>
+      <trans-unit id="XJc307D" resname="we research skincare">
+        <source>we research skincare</source>
+        <target>nous faisons des recherches sur les soins de la peau</target>
+      </trans-unit>
+      <trans-unit id="0FF4lku" resname="We are looking for skin care !&#10;                WIRED BEAUTY is a new datadriven market research company dedicated to cosmetic laboratories.">
+        <source>We are looking for skin care !
+                WIRED BEAUTY is a new datadriven market research company dedicated to cosmetic laboratories.</source>
+        <target>Nous recherchons des soins de la peau !
+                                WIRED BEAUTY est une nouvelle société d'études de marché axée sur les données et dédiée aux laboratoires cosmétiques..</target>
+      </trans-unit>
+      <trans-unit id="oRQeW2q" resname="speed of study">
+        <source>speed of study</source>
+        <target>vitesse d'étude</target>
+      </trans-unit>
+      <trans-unit id="7XFwulM" resname="Save time with faster consumer testing and real time tracking of your study. We remain flexible on the&#10;                duration of the test">
+        <source>Save time with faster consumer testing and real time tracking of your study. We remain flexible on the
+                duration of the test</source>
+        <target>Gagnez du temps avec des tests consommateurs plus rapides et un suivi en temps réel de votre étude. Nous restons flexibles sur la
+                                durée du test</target>
+      </trans-unit>
+      <trans-unit id="gZu5hvQ" resname="reliability">
+        <source>reliability</source>
+        <target>fiabilité</target>
+      </trans-unit>
+      <trans-unit id="vCHjOut" resname="Gain reliability with a larger panel of consumers who will test your products so that your studies are&#10;                more credible to your audience.">
+        <source>Gain reliability with a larger panel of consumers who will test your products so that your studies are
+                more credible to your audience.</source>
+        <target>Gagnez en fiabilité avec un panel plus large de consommateurs qui testeront vos produits afin que vos études soient
+                                plus crédibles pour votre public.</target>
+      </trans-unit>
+      <trans-unit id="lswD_An" resname="attractive prices">
+        <source>attractive prices</source>
+        <target>prix attractifs</target>
+      </trans-unit>
+      <trans-unit id="VINpeH5" resname="Our reports offer both qualitative and quantitative results without taking up a significant portion of&#10;                your budget">
+        <source>Our reports offer both qualitative and quantitative results without taking up a significant portion of
+                your budget</source>
+        <target>Nos rapports offrent des résultats à la fois qualitatifs et quantitatifs sans absorber une part importante de votre
+                                votre budget</target>
+      </trans-unit>
+      <trans-unit id="IeshU90" resname="customers">
+        <source>customers</source>
+        <target>clients</target>
+      </trans-unit>
+      <trans-unit id="yNcVpvV" resname="Professionals">
+        <source>Professionals</source>
+        <target>Professionnels</target>
+      </trans-unit>
+      <trans-unit id="XwET42h" resname="Panelists">
+        <source>Panelists</source>
+        <target>Testeurs</target>
+      </trans-unit>
+      <trans-unit id="FTLiWNn" resname="Scientist">
+        <source>Scientist</source>
+        <target>Scientifique</target>
+      </trans-unit>
+      <trans-unit id="U28cTzJ" resname="Password Reset Email Sent">
+        <source>Password Reset Email Sent</source>
+        <target>Envoi du courriel de réinitialisation du mot de passe</target>
+      </trans-unit>
+      <trans-unit id="zXO5kk6" resname="If an account matching your email exists, then an email was just sent that contains a link that you can use to reset your password.&#10;        This link will expire in">
+        <source>If an account matching your email exists, then an email was just sent that contains a link that you can use to reset your password.
+        This link will expire in</source>
+        <target>Si un compte correspondant à votre adresse e-mail existe, alors un e-mail vient d'être envoyé contenant un lien que vous pouvez utiliser pour réinitialiser votre mot de passe.
+                        Ce lien expirera dans</target>
+      </trans-unit>
+      <trans-unit id="bs9avOq" resname="If you don't receive an email please check your spam folder or">
+        <source>If you don't receive an email please check your spam folder or</source>
+        <target>Si vous ne recevez pas d'e-mail, vérifiez votre dossier de courrier indésirable (spam) ou</target>
+      </trans-unit>
+      <trans-unit id="W13t7jL" resname="try again">
+        <source>try again</source>
+        <target>réessayer</target>
+      </trans-unit>
+      <trans-unit id="WfpDeb4" resname="Reset your password">
+        <source>Reset your password</source>
+        <target>Réinitialiser votre mot de passe</target>
+      </trans-unit>
+      <trans-unit id="4O3_s6c" resname="Reset password">
+        <source>Reset password</source>
+        <target>Réinitialiser le mot de passe</target>
+      </trans-unit>
+      <trans-unit id="NjnvzQi" resname="Hi">
+        <source>Hi</source>
+        <target>Bonjour</target>
+      </trans-unit>
+      <trans-unit id="vQH5j0c" resname="To reset your password, please visit the following link">
+        <source>To reset your password, please visit the following link</source>
+        <target>Pour réinitialiser votre mot de passe, veuillez consulter le lien suivant</target>
+      </trans-unit>
+      <trans-unit id="87wG9uu" resname="This link will expire in">
+        <source>This link will expire in</source>
+        <target>Ce lien expirera dans</target>
+      </trans-unit>
+      <trans-unit id="p49E9Md" resname="Cheers">
+        <source>Cheers</source>
+        <target>Cordialement</target>
+      </trans-unit>
+      <trans-unit id="YTqKLEx" resname="Enter your email address and we will send you a&#10;                link to reset your password.">
+        <source>Enter your email address and we will send you a
+                link to reset your password.</source>
+        <target>Entrez votre adresse e-mail et nous vous enverrons un
+                                lien pour réinitialiser votre mot de passe.</target>
+      </trans-unit>
+      <trans-unit id="y2XxXvP" resname="Send password reset email">
+        <source>Send password reset email</source>
+        <target>Envoyer un courriel de réinitialisation du mot de passe</target>
+      </trans-unit>
+      <trans-unit id="Ktr4T_D" resname="who become friends while working toghether at l’Oréal.&#10;                    Stanislas initiated the scientific research on electrochemistry and antiox measurement to develop a&#10;                    skincare prescription tool, and launched a first B2C sun prevention tool (mapo solar).">
+        <source>who become friends while working toghether at l’Oréal.
+                    Stanislas initiated the scientific research on electrochemistry and antiox measurement to develop a
+                    skincare prescription tool, and launched a first B2C sun prevention tool (mapo solar).</source>
+        <target>qui deviennent amis en travaillant ensemble chez l'Oréal.
+                                    Stanislas a initié la recherche scientifique sur l'électrochimie et la mesure des antioxydants pour développer un outil de prescription de soins de la peau.
+                                    outil de prescription de soins de la peau, et a lancé un premier outil de prévention solaire B2C (mapo solar).</target>
+      </trans-unit>
+      <trans-unit id="OqGWjMo" resname="smart data x skincare">
+        <source>smart data x skincare</source>
+        <target>smart data x skincare</target>
+      </trans-unit>
+      <trans-unit id="3kgGhZG" resname="Our measurements range from targeted markers such as Ascorbic acid, Alpha Tocopherol and&#10;                    squalen/sebum and non targeted measurements of the barrier function or the antioxydative capacity of&#10;                    the skin.">
+        <source>Our measurements range from targeted markers such as Ascorbic acid, Alpha Tocopherol and
+                    squalen/sebum and non targeted measurements of the barrier function or the antioxydative capacity of
+                    the skin.</source>
+        <target>Nos mesures vont des marqueurs ciblés tels que l'acide ascorbique, l'alpha-tocophérol et le squalen/sébum aux mesures non ciblées de la fonction barrière ou de la capacité antioxydante.
+                                    squalen/sébum et des mesures non ciblées de la fonction barrière ou de la capacité antioxydante de la peau.
+                                    la peau.</target>
+      </trans-unit>
+      <trans-unit id="XlZPB7v" resname="Our scientific partners have established that our measurement of TEWL is statistically correlated to&#10;                    that of chromatography which is the reference methodology as opposed to corneometry. Our technology&#10;                    is complementary to imagery.">
+        <source>Our scientific partners have established that our measurement of TEWL is statistically correlated to
+                    that of chromatography which is the reference methodology as opposed to corneometry. Our technology
+                    is complementary to imagery.</source>
+        <target>Nos partenaires scientifiques ont établi que notre mesure du TEWL est statistiquement corrélée à celle de la chromatographie.
+                                    celle de la chromatographie qui est la méthodologie de référence par opposition à la cornéométrie. Notre technologie
+                                    est complémentaire de l'imagerie.</target>
+      </trans-unit>
+      <trans-unit id="1AwjS4k" resname="our insanely fast algorithm!">
+        <source>our insanely fast algorithm!</source>
+        <target>notre algorithme incroyablement rapide !</target>
+      </trans-unit>
+      <trans-unit id="u.QdVXm" resname="Thanks to its IOT, its mobile consumer app and its standardized single-use patches, Wired Beauty can&#10;                    decifer within seconds skin antioxydative and mosterizing reactions. Artificial intelligence&#10;                    improves repeatability of process.">
+        <source>Thanks to its IOT, its mobile consumer app and its standardized single-use patches, Wired Beauty can
+                    decifer within seconds skin antioxydative and mosterizing reactions. Artificial intelligence
+                    improves repeatability of process.</source>
+        <target>Grâce à son IOT, son application mobile grand public et ses patchs standardisés à usage unique, Wired Beauty peut
+                                    déchiffrer en quelques secondes les réactions antioxydantes et matifiantes de la peau. L'intelligence artificielle
+                                    améliore la répétabilité du processus.</target>
+      </trans-unit>
+      <trans-unit id="DL._Xj_" resname="book a demo">
+        <source>book a demo</source>
+        <target>réserver une démo</target>
+      </trans-unit>
+      <trans-unit id="VyL4oPA" resname="wired beauty scientific partners">
+        <source>wired beauty scientific partners</source>
+        <target>nos partenaires scientifiques</target>
+      </trans-unit>
+      <trans-unit id="_XfYLo1" resname="The Wired Beauty technology is the fruit of a scientific consortium uniting the founders of Wired&#10;                Beauty,&#10;                the APHP (Assistance Publique – Hôpitaux de Paris www.APHP.fr and the French Contract Research&#10;                Organization&#10;                (CRO), QIMA www.qima.fr">
+        <source>The Wired Beauty technology is the fruit of a scientific consortium uniting the founders of Wired
+                Beauty,
+                the APHP (Assistance Publique – Hôpitaux de Paris www.APHP.fr and the French Contract Research
+                Organization
+                (CRO), QIMA www.qima.fr</source>
+        <target>La technologie Wired Beauty est le fruit d'un consortium scientifique réunissant les fondateurs de Wired
+                                Beauty,
+                                l'APHP (Assistance Publique - Hôpitaux de Paris) www.APHP.fr et la société française de recherche sous contrat (SRC).
+                                française
+                                (CRO), QIMA www.qima.fr</target>
+      </trans-unit>
+      <trans-unit id="O.7aWjB" resname="TOGETHER THEY HAVE:">
+        <source>TOGETHER THEY HAVE:</source>
+        <target>ENSEMBLE, ILS ONT :</target>
+      </trans-unit>
+      <trans-unit id="Fg7Ezy." resname="Demonstrated the power of electrochemistry to decifer antioxydative performance on the skin&#10;                Proved that the Wired Beauty IOT nomadic lab can level with traditionnal chromatography test in less&#10;                than 1&#10;                minute (90% correlation)&#10;                Found that the Wired Beauty IOT nomadic lab device can beat TWELL tests&#10;                Miniaturized the Wired Beauty IOT nomadic device&#10;                Developped the interpretation of the signal algorythm within minutes">
+        <source>Demonstrated the power of electrochemistry to decifer antioxydative performance on the skin
+                Proved that the Wired Beauty IOT nomadic lab can level with traditionnal chromatography test in less
+                than 1
+                minute (90% correlation)
+                Found that the Wired Beauty IOT nomadic lab device can beat TWELL tests
+                Miniaturized the Wired Beauty IOT nomadic device
+                Developped the interpretation of the signal algorythm within minutes</source>
+        <target>Démontré le pouvoir de l'électrochimie pour déceler la performance antioxydante sur la peau.
+                                Démontré que le laboratoire nomade IOT de Wired Beauty peut égaler un test de chromatographie traditionnel en moins d'une minute.
+                                moins d'une
+                                minute (corrélation de 90%)
+                                Il a été démontré que le laboratoire nomade Wired Beauty IOT peut battre les tests TWELL.
+                                Miniaturisation du dispositif nomade IOT de Wired Beauty.
+                                Développement de l'interprétation de l'algorythme du signal en quelques minutes.</target>
+      </trans-unit>
+      <trans-unit id="MQXbQru" resname="read a study">
+        <source>read a study</source>
+        <target>lire une étude</target>
+      </trans-unit>
+      <trans-unit id="UuS7spz" resname="fill in my study">
+        <source>fill in my study</source>
+        <target>publier mon étude</target>
+      </trans-unit>
+      <trans-unit id="EG7ENYb" resname="similarities with medicament protocols">
+        <source>similarities with medicament protocols</source>
+        <target>similarités avec les protocoles de médicaments</target>
+      </trans-unit>
+      <trans-unit id="GXuwl0e" resname="Skin care product testing often resembles the protocols of medicament testing.&#10;            It is a long sequencial process which aims to protect the voluntary testers, measure performance, record&#10;            side-effects.&#10;            For the most serious cosmetic labs, it is not rare to spend over 18 months gathering and analyzing the&#10;            results of the following stages.">
+        <source>Skin care product testing often resembles the protocols of medicament testing.
+            It is a long sequencial process which aims to protect the voluntary testers, measure performance, record
+            side-effects.
+            For the most serious cosmetic labs, it is not rare to spend over 18 months gathering and analyzing the
+            results of the following stages.</source>
+        <target>Les tests des produits de soins de la peau ressemblent souvent aux protocoles des tests de médicaments.
+                            Il s'agit d'un long processus séquentiel qui vise à protéger les testeurs volontaires, à mesurer les performances, à enregistrer les effets secondaires, etc.
+                            les effets secondaires.
+                            Pour les laboratoires cosmétiques les plus sérieux, il n'est pas rare de passer plus de 18 mois à rassembler et analyser les résultats des étapes suivantes.
+                            résultats des étapes suivantes.</target>
+      </trans-unit>
+      <trans-unit id="101H42_" resname="what makes wired beauty different?">
+        <source>what makes wired beauty different?</source>
+        <target>qu'est-ce qui rend wired beauty différent?</target>
+      </trans-unit>
+      <trans-unit id="4uG9wpR" resname="interview of founders">
+        <source>interview of founders</source>
+        <target>interview des fondateurs</target>
+      </trans-unit>
+      <trans-unit id="3vU_lfH" resname="blog">
+        <source>blog</source>
+        <target>blog</target>
+      </trans-unit>
+      <trans-unit id="ViRNJhf" resname="become a panelist">
+        <source>become a panelist</source>
+        <target>devenir testeur</target>
+      </trans-unit>
+      <trans-unit id="ihNWyr6" resname="we value your privacy">
+        <source>we value your privacy</source>
+        <target>nous accordons de l'importance à votre vie privée</target>
+      </trans-unit>
+      <trans-unit id="54UWLqd" resname="Wired Beauty use cookies and similar technologies to enhance your experience and measure&#10;                            your interactions&#10;                            with our websites, products and services. This allows us to provide you with relevant&#10;                            information in your&#10;                            searches and advertisements on websites like this one. If you are comfortable with this,&#10;                            click &quot;I accept&quot;. Or,">
+        <source>Wired Beauty use cookies and similar technologies to enhance your experience and measure
+                            your interactions
+                            with our websites, products and services. This allows us to provide you with relevant
+                            information in your
+                            searches and advertisements on websites like this one. If you are comfortable with this,
+                            click "I accept". Or,</source>
+        <target>Wired Beauty utilise des cookies et des technologies similaires pour améliorer votre expérience et mesurer
+                                            vos interactions
+                                            avec nos sites web, produits et services. Cela nous permet de vous fournir des
+                                            informations pertinentes dans vos
+                                            recherches et publicités sur des sites web comme celui-ci. Si cela vous convient,
+                                            cliquez sur "J'accepte". Ou bien,</target>
+      </trans-unit>
+      <trans-unit id="GG3minK" resname="I dot not&#10;                                accept">
+        <source>I dot not
+                                accept</source>
+        <target>Je n'accepte pas</target>
+      </trans-unit>
+      <trans-unit id="vNzdGTz" resname="i accept">
+        <source>i accept</source>
+        <target>J'accepte</target>
+      </trans-unit>
+      <trans-unit id=".mq036T" resname="privacy statement">
+        <source>privacy statement</source>
+        <target>déclaration de confidentialité</target>
+      </trans-unit>
+      <trans-unit id="pwjfksn" resname="legal">
+        <source>legal</source>
+        <target>mentions légales</target>
+      </trans-unit>
+      <trans-unit id="O8_p9Kj" resname="cookies policy">
+        <source>cookies policy</source>
+        <target>politique de cookies</target>
+      </trans-unit>
+      <trans-unit id="qaeCoSj" resname="Edit Article">
+        <source>Edit Article</source>
+        <target>Modifier l'article</target>
+      </trans-unit>
+      <trans-unit id="F7QsEmm" resname="Article index">
+        <source>Article index</source>
+        <target>Articles</target>
+      </trans-unit>
+      <trans-unit id="fozSBW2" resname="Title">
+        <source>Title</source>
+        <target>Titre</target>
+      </trans-unit>
+      <trans-unit id="D5lam8." resname="no records found">
+        <source>no records found</source>
+        <target>aucun enregistrement trouvé</target>
+      </trans-unit>
+      <trans-unit id="3ikIv3b" resname="New Article">
+        <source>New Article</source>
+        <target>Nouvel article</target>
+      </trans-unit>
+      <trans-unit id="kZIZXY7" resname="Create new Article">
+        <source>Create new Article</source>
+        <target>Créer un nouvel article</target>
+      </trans-unit>
+      <trans-unit id="KdlJIlE" resname="Article">
+        <source>Article</source>
+        <target>Article</target>
+      </trans-unit>
+      <trans-unit id="MAhsJ22" resname="We use technology to better understand consumer needs and life style as well as skin reactions.">
+        <source>We use technology to better understand consumer needs and life style as well as skin reactions.</source>
+        <target>Nous utilisons la technologie pour mieux comprendre les besoins et le style de vie des consommateurs, ainsi que les réactions de la peau..</target>
+      </trans-unit>
+      <trans-unit id="GF_NsyJ" resname="Hello">
+        <source>Hello</source>
+        <target>Bonjour</target>
+      </trans-unit>
+      <trans-unit id="PFzpnMg" resname="Find out the latest studies">
+        <source>Find out the latest studies</source>
+        <target>Découvrez les dernières études</target>
+      </trans-unit>
+      <trans-unit id="8PE7wCn" resname="our vision">
+        <source>our vision</source>
+        <target>notre vision</target>
+      </trans-unit>
+      <trans-unit id="S9GeOjE" resname="contact us">
+        <source>contact us</source>
+        <target>contactez-nous</target>
+      </trans-unit>
+      <trans-unit id="9cXGqw4" resname="QIMA Life Sciences (formerly Bioalternatives &amp; Synelvia) offers analytical services tailored to&#10;                skin biology. The assay offering ranges from virtual in silico screening to bioanalysis of non-invasive clinical samples&#10;                clinical samples, as well as in vitro and ex vivo tests.">
+        <source>QIMA Life Sciences (formerly Bioalternatives &amp; Synelvia) offers analytical services tailored to
+                skin biology. The assay offering ranges from virtual in silico screening to bioanalysis of non-invasive clinical samples
+                clinical samples, as well as in vitro and ex vivo tests.</source>
+        <target>QIMA Life Sciences (anciennement Bioalternatives &amp; Synelvia) offre des services analytiques adaptés à la
+                                         biologie de la peau. L'offre de tests va du criblage virtuel in silico à la bioanalyse d'échantillons cliniques non invasifs
+                                         échantillons cliniques, ainsi que des tests in vitro et ex vivo.</target>
+      </trans-unit>
+      <trans-unit id="AGh92L3" resname="École Centrale Paris, Intern of the Paris Hospitals, PhD">
+        <source>École Centrale Paris, Intern of the Paris Hospitals, PhD</source>
+        <target>École Centrale Paris, Interne des Hôpitaux de Paris, PhD</target>
+      </trans-unit>
+      <trans-unit id="otKFs1K" resname="Decline">
+        <source>Decline</source>
+        <target>Refuser</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

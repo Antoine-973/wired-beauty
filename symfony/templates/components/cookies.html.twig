@@ -1,0 +1,48 @@
+<button type="button" id="modalTrigger" class="d-none" data-bs-toggle="modal" data-bs-target="#cookiesModal"></button>
+
+<!-- Modal -->
+<div class="modal fade" id="cookiesModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-body">
+                <div class="row w-100">
+                    <div class="col-10">
+                        <h1 class="text-uppercase wb-text-30">we value your privacy</h1>
+                        <p>
+                            Wired Beauty use cookies and similar technologies to enhance your experience and measure
+                            your interactions
+                            with our websites, products and services. This allows us to provide you with relevant
+                            information in your
+                            searches and advertisements on websites like this one. If you are comfortable with this,
+                            click "I accept". Or, <a data-bs-dismiss="modal" class="text-decoration-underline">I dot not
+                                accept</a>
+                        </p>
+                    </div>
+                    <div class="col-2 d-flex justify-content-center align-items-center">
+                        <button id="modalAccept" type="button" class="btn wb-btn-primary text-uppercase"
+                                data-bs-dismiss="modal">i
+                            accept
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const modalTrigger = document.getElementById('modalTrigger')
+    const modalAccept = document.getElementById('modalAccept')
+
+    modalAccept.addEventListener('click', function () {
+        localStorage.setItem('wb_accept_cookies', 'true')
+    })
+
+    const acceptedCookies = JSON.parse(localStorage.getItem('wb_accept_cookies'))
+    if (!acceptedCookies) {
+        setTimeout(() => {
+            modalTrigger.click()
+        }, 2000)
+    }
+</script>

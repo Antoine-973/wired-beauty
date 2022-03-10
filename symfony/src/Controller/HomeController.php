@@ -15,22 +15,40 @@ class HomeController extends AbstractController
         return $this->render('home.html.twig');
     }
 
-    #[Route('/our-story', name: 'our_story_index', methods: ['GET'])]
-    public function our_story(): Response
+    #[Route('/story', name: 'about_story_index', methods: ['GET'])]
+    public function story(): Response
     {
-        return $this->render('our_story.html.twig');
+        return $this->render('about/story.html.twig');
     }
 
-    #[Route('/our-beliefs', name: 'our_beliefs_index', methods: ['GET'])]
-    public function our_beliefs(): Response
+    #[Route('/beliefs', name: 'about_beliefs_index', methods: ['GET'])]
+    public function beliefs(): Response
     {
-        return $this->render('our_beliefs.html.twig');
+        return $this->render('about/beliefs.html.twig');
     }
 
-    #[Route('/our-team', name: 'our_team_index', methods: ['GET'])]
-    public function our_team(): Response
+    #[Route('/team', name: 'about_team_index', methods: ['GET'])]
+    public function team(): Response
     {
-        return $this->render('our_team.html.twig');
+        return $this->render('about/team.html.twig');
+    }
+
+    #[Route('/technologies', name: 'factory_technologies_index', methods: ['GET'])]
+    public function technologies(): Response
+    {
+        return $this->render('factory/technologies.html.twig');
+    }
+
+    #[Route('/services', name: 'factory_services_index', methods: ['GET'])]
+    public function services(): Response
+    {
+        return $this->render('factory/services.html.twig');
+    }
+
+    #[Route('/validation', name: 'factory_validation_index', methods: ['GET'])]
+    public function validation(): Response
+    {
+        return $this->render('factory/validation.html.twig');
     }
 
     #[Route('/excel', name: 'excel_parser', methods: ['GET'])]
@@ -38,4 +56,5 @@ class HomeController extends AbstractController
     {
         return $this->render('react/index.html.twig');
     }
+
 }

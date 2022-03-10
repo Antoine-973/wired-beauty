@@ -1,0 +1,75 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="row w-100 align-items-center m-0" id="about-cover">
+        <div class="col-4 p-0 d-flex justify-content-center align-items-center"
+             style="background-image: url('/images/hex-bg.png')">
+            <h1 class="text-uppercase wb-text-white">our technologies</h1>
+        </div>
+        <div class="col-8 p-0">
+            <img src="/images/mapo-device.png" alt="cover" class="w-100"/>
+        </div>
+    </div>
+    <div class="w-100 framed-t framed-b">
+        <img src="/images/lines.svg" alt="lines" class="w-100"/>
+    </div>
+    <div class="row w-100 align-items-center m-0">
+        <div class="col-6 p-0">
+            <img src="/images/lab.png" alt="cover" class="w-100"/>
+        </div>
+        <div class="col-6 p-0 d-flex justify-content-center align-items-center">
+            <div class="w-75">
+                <h1 class="text-uppercase mb-4">beauty science & proofs</h1>
+                <p>
+                    Wired Beauty as of today is a saas based start-up co-founded by Stanislas and Sophie, two beauty
+                    experts
+                </p>
+                <p>
+                    who become friends while working toghether at l’Oréal.
+                    Stanislas initiated the scientific research on electrochemistry and antiox measurement to develop a
+                    skincare prescription tool, and launched a first B2C sun prevention tool (mapo solar).
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="space w-100 framed-t framed-b"></div>
+    <div class="row w-100 align-items-center m-0">
+        <div class="col-6 p-0 d-flex justify-content-center align-items-center">
+            <div class="w-75">
+                <h1 class="text-uppercase mb-4">smart data x skincare</h1>
+                <p>
+                    Our measurements range from targeted markers such as Ascorbic acid, Alpha Tocopherol and
+                    squalen/sebum and non targeted measurements of the barrier function or the antioxydative capacity of
+                    the skin.
+                </p>
+
+                <p>
+                    Our scientific partners have established that our measurement of TEWL is statistically correlated to
+                    that of chromatography which is the reference methodology as opposed to corneometry. Our technology
+                    is complementary to imagery.
+                </p>
+            </div>
+        </div>
+        <div class="col-6 p-0">
+            <img src="/images/woman-call.png" alt="cover" class="w-100"/>
+        </div>
+    </div>
+    <div class="row w-100 align-items-center m-0">
+        <div class="col-6 p-0">
+            <img src="/images/woman-phone.png" alt="cover" class="w-100"/>
+        </div>
+        <div class="col-6 p-0 d-flex justify-content-center align-items-center position-relative">
+            <div class="w-75">
+                <h1 class="text-uppercase mb-4">our insanely fast algorithm!</h1>
+                <p>
+                    Thanks to its IOT, its mobile consumer app and its standardized single-use patches, Wired Beauty can
+                    decifer within seconds skin antioxydative and mosterizing reactions. Artificial intelligence
+                    improves repeatability of process.
+                </p>
+                <a href="{{ path("contact_index") }}" class="btn wb-btn-primary text-uppercase">request a demo</a>
+            </div>
+            <img class="position-absolute end-0 bottom-0" src="/images/mapo-open.png" width="300" id="mapo-open">
+        </div>
+    </div>
+    <div class="space w-100 framed-t framed-b"></div>
+{% endblock %}

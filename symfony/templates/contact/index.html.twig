@@ -1,21 +1,18 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Account request{% endblock %}
+{% block title %}Contact Us{% endblock %}
 
 {% block body %}
-    <div class="p-5">
-        <h1>Contact Us</h1>
+    <div class="p-5 w-75 mx-auto">
+        <div class="text-center mb-5">
+            <h1 class="wb-text-48 text-uppercase">Contact Us</h1>
+        </div>
 
-        <p>
+        <p class="mb-4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a nec vitae integer libero pharetra.
             Imperdiet
             tempor quam at sit. Dignissim nulla morbi sodales iaculis lacus ut mollis fermentum commodo.
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a nec vitae integer libero pharetra.
-            Imperdiet
-            tempor quam at sit. Dignissim nulla morbi sodales iaculis lacus ut mollis fermentum commodo.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a nec vitae integer libero pharetra.
-            Imperdiet
-            tempor quam at sit. Dignissim nulla morbi sodales iaculis lacus ut mollis fermentum commodo.
         </p>
 
         {{ include('contact/_form.html.twig') }}

@@ -50,7 +50,11 @@ footer {
     }
 
     background-color: $light_green;
-
   }
+}
 
+.modal-dialog {
+  max-width: 100vw;
+  position: fixed;
+  bottom: 0;
 }

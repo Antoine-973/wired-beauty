@@ -48,7 +48,6 @@ class ScientistsStudiesController extends AbstractController
     #[Route('/{id}', name: 'app_scientists_studies_show', methods: ['GET'])]
     public function show( ScientistStudy $study ): Response
     {
-        dd($study);
         return $this->render('admin/scientists_studies/show.html.twig', [
             'study' => $study,
         ]);

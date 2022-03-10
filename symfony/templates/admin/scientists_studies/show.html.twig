@@ -13,7 +13,9 @@
             </tr>
             <tr>
                 <th>Path</th>
-                <td>{{ study.path ??'Unknown'}}</td>
+                <td>
+                    <a href="{{ vich_uploader_asset(study, 'file') }}">Link</a>
+                </td>
             </tr>
         </tbody>
     </table>

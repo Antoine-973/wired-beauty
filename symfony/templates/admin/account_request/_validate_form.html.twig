@@ -1,4 +1,4 @@
 <form method="post" action="{{ path('app_admin_account_request_validate', {'id': account_request.id}) }}" onsubmit="return confirm('Are you sure you want to validate this request ?');">
     <input type="hidden" name="_token" value="{{ csrf_token('validate' ~ account_request.id) }}">
-    <button class="btn">Validate</button>
+    <button class="btn wb-btn-edit">Validate</button>
 </form>

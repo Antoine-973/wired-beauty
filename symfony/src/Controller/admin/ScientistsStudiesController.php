@@ -67,12 +67,12 @@ class ScientistsStudiesController extends AbstractController
     }
 
     #[Route('/{id}', name: 'app_scientists_studies_delete', methods: ['POST'])]
-    public function delete(Request $request, ScientistStudy $study, UserRepository $userRepository): Response
+    public function delete(Request $request, ScientistStudy $study, ScientistStudyRepository $SSRepository ): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$user->getId(), $request->request->get('_token'))) {
-            $userRepository->remove($user);
+        if ($this->isCsrfTokenValid('delete'.$study->getId(), $request->request->get('_token'))) {
+            $SSRepository->remove($study);
         }
 
-        return $this->redirectToRoute('app_user_index', [], Response::HTTP_SEE_OTHER);
+        return $this->redirectToRoute('app_scientists_studies_index', [], Response::HTTP_SEE_OTHER);
     }
 }

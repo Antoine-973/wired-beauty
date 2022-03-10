@@ -2,12 +2,15 @@
 
 namespace App\Entity;
 
+use App\Entity\Traits\BlameableTrait;
 use App\Repository\ScientistStudyRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: ScientistStudyRepository::class)]
 class ScientistStudy
 {
+    use BlameableTrait;
+
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]

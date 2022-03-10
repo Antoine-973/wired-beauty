@@ -1,17 +1,17 @@
 {% extends 'admin.base.html.twig' %}
 
-{% block title %}Users{% endblock %}
+{% block title %}{{ 'Users'|trans }}{% endblock %}
 
 {% block body %}
-    <h1>Users</h1>
+    <h1>{{ 'Users'|trans }}</h1>
 
     <table class="table">
         <thead>
-            <tr>
-                <th>Email</th>
-                <th>Roles</th>
-                <th>actions</th>
-            </tr>
+        <tr>
+            <th>{{ 'Email'|trans }}</th>
+            <th>{{ 'Roles'|trans }}</th>
+            <th>{{ 'actions'|trans }}</th>
+        </tr>
         </thead>
         <tbody>
         {% for user in users %}
@@ -19,17 +19,19 @@
                 <td>{{ user.email }}</td>
                 <td>{{ user.roles ? user.roles|json_encode : '' }}</td>
                 <td>
-                    <a class="wb-btn-primary btn" href="{{ path('app_user_show', {'id': user.id}) }}">show</a>
-                    <a class="wb-btn-edit btn" href="{{ path('app_user_edit', {'id': user.id}) }}">edit</a>
+                    <a class="wb-btn-primary btn"
+                       href="{{ path('app_user_show', {'id': user.id}) }}">{{ 'show'|trans }}</a>
+                    <a class="wb-btn-edit btn"
+                       href="{{ path('app_user_edit', {'id': user.id}) }}">{{ 'edit'|trans }}</a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="5">No records found</td>
+                <td colspan="5">{{ 'No records found'|trans }}</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a class="wb-btn-primary btn" href="{{ path('app_user_new') }}">Create new</a>
+    <a class="wb-btn-primary btn" href="{{ path('app_user_new') }}">{{ 'Create new'|trans }}</a>
 {% endblock %}

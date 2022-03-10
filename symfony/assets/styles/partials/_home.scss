@@ -1,3 +1,4 @@
+
 #about-cover {
   overflow: hidden;
 
@@ -31,7 +32,11 @@
 
 
 .team-card {
-  min-height: 500px;
+  min-height: 450px;
+
+  .team-desc {
+    padding-top: 20px !important;
+  }
 }
 
 #mapo-open {

@@ -11,6 +11,18 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Lausanne Regular", sans-serif;
 }
 
+header {
+  position: fixed;;
+  top: 0;
+  left: 0;
+  height: 60px;
+  background-color: white;
+}
+
+body {
+  padding-top: 60px;
+}
+
 .framed {
   border: solid 1px $dark_green;
 }
@@ -58,3 +70,8 @@ footer {
   position: fixed;
   bottom: 0;
 }
+
+ul.dropdown-menu {
+  min-width: fit-content;
+}
+

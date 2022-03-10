@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Welcome!{% endblock %}</title>
+    <title>{% block title %}{% endblock %} | Wired Beauty</title>
 
     {#   fonts  #}
     <link href="https://fonts.googleapis.com/css?family=Lausanne&display=swap" rel="stylesheet"/>
@@ -19,6 +19,11 @@
     <link href="/build/styles.css" type="text/css" rel="stylesheet"/>
 
     {% block stylesheets %}
+        <style>
+            ul.hex-bullets li {
+                list-style-image: url(/images/icons/bullet.svg)
+            }
+        </style>
         {{ encore_entry_link_tags('app') }}
         {# {{ encore_entry_link_tags('styles') }} #}
     {% endblock %}

@@ -11,10 +11,10 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/join')]
+#[Route('/{_locale<%app.supported_locales%>}/join/')]
 class AccountRequestController extends AbstractController
 {
-    #[Route('/professionals', name: 'account_request_pro_index', methods: ['GET', 'POST'])]
+    #[Route('professionals', name: 'account_request_pro_index', methods: ['GET', 'POST'])]
     public function pro_index(Request $request, AccountRequestRepository $accountRequestRepository): Response
     {
         $accountRequest = new AccountRequest();
@@ -33,7 +33,7 @@ class AccountRequestController extends AbstractController
         ]);
     }
 
-    #[Route('/scientists', name: 'account_request_scientists_index', methods: ['GET', 'POST'])]
+    #[Route('scientists', name: 'account_request_scientists_index', methods: ['GET', 'POST'])]
     public function scientists_index(Request $request, AccountRequestRepository $accountRequestRepository): Response
     {
         $accountRequest = new AccountRequest();
@@ -52,7 +52,7 @@ class AccountRequestController extends AbstractController
         ]);
     }
 
-    #[Route('/panelists', name: 'account_request_panelists_index', methods: ['GET', 'POST'])]
+    #[Route('panelists', name: 'account_request_panelists_index', methods: ['GET', 'POST'])]
     public function panelists_index(Request $request, AccountRequestRepository $accountRequestRepository, UserRepository $userRepository): Response
     {
         $accountRequest = new AccountRequest();
@@ -60,7 +60,7 @@ class AccountRequestController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            if (!$userRepository->findBy(['email' => $form->getData()->getEmail()])){
+            if (!$userRepository->findBy(['email' => $form->getData()->getEmail()])) {
                 $accountRequest->setType("TESTER");
                 $accountRequestRepository->add($accountRequest);
                 return $this->redirectToRoute('account_request_panelists_index', [], Response::HTTP_SEE_OTHER);

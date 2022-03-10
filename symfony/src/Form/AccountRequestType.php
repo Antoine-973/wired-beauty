@@ -13,10 +13,26 @@ class AccountRequestType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('first_name')
-            ->add('last_name')
-            ->add('company')
-            ->add('email')
+            ->add('first_name', TextType::class, [
+                'attr' => [
+                    'placeholder' => "John"
+                ]
+            ])
+            ->add('last_name', TextType::class, [
+                'attr' => [
+                    'placeholder' => "Doe"
+                ]
+            ])
+            ->add('company', TextType::class, [
+                'attr' => [
+                    'placeholder' => "Wired Beauty"
+                ]
+            ])
+            ->add('email', TextType::class, [
+                'attr' => [
+                    'placeholder' => "johndoe@wiredbeauty.com"
+                ]
+            ])
             ->add('phone')
             ->add('message');
     }

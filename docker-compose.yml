@@ -27,10 +27,9 @@ services:
       <<: *app-cache-from
     depends_on:
       - db
-    environment:
-      - APP_ENV=${APP_ENV}
-      - APP_SECRET=${APP_SECRET}
-      - DATABASE_URL=${DATABASE_URL}
+      - smtp
+    env_file:
+      - ./symfony/.env
     healthcheck:
       interval: 10s
       timeout: 3s
@@ -56,10 +55,10 @@ services:
       - "80:80"
       - "443:443"
 
-  mailcatcher:
-    image: schickling/mailcatcher
+  smtp:
+    image: djfarrelly/maildev
     ports:
-      - "1080:1080"
+      - "8080:80"
 
 volumes:
   db-data: {}

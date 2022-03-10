@@ -7,7 +7,6 @@ use App\Form\ArticleType;
 use App\Repository\ArticleRepository;
 use App\Security\Voter\ArticleVoter;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;

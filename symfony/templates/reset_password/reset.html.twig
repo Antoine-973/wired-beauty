@@ -3,10 +3,34 @@
 {% block title %}{{ 'Reset your password'|trans }}{% endblock %}
 
 {% block body %}
-    <h1>{{ 'Reset your password'|trans }}</h1>
+    <div class="row w-100 p-0 m-0" id="loginPage">
+        <div class="col-6 p-0 d-flex justify-content-center align-items-center">
+            {{ form_start(resetForm) }}
+            {% for flash_error in app.flashes('reset_password_error') %}
+                <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
+            {% endfor %}
 
-    {{ form_start(resetForm) }}
-    {{ form_row(resetForm.plainPassword) }}
-    <button class="btn btn-primary">{{ 'Reset password'|trans }}</button>
-    {{ form_end(resetForm) }}
+            <h1 class="h3 mb-3 font-weight-normal text-uppercase">{{ 'Reset your password'|trans }}</h1>
+
+
+            <div class="col-12 d-flex flex-column">
+                {{ form_widget(resetForm.plainPassword, {'attr': {'class': 'form-control'}}) }}
+            </div>
+
+            <div>
+                <small>
+                    {{ 'Enter your email address and we will send you a
+                    link to reset your password.'|trans }}
+                </small>
+            </div>
+
+            <div class="mt-4 d-flex align-items-center justify-content-between">
+                <button class="btn wb-btn-primary">{{ 'Send password reset email'|trans }}</button>
+            </div>
+            {{ form_end(resetForm) }}
+        </div>
+        <div class="col-6 p-0">
+            <img src="/images/abstract-hex.png" alt="cover" class="w-100"/>
+        </div>
+    </div>
 {% endblock %}

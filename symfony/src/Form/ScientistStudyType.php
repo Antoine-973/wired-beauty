@@ -4,10 +4,11 @@ namespace App\Form;
 
 use App\Entity\ScientistStudy;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\OptionsResolver\OptionsResolver;
 use Vich\UploaderBundle\Form\Type\VichFileType;
+use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Validator\Constraints\File;
+use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class ScientistStudyType extends AbstractType
 {
@@ -15,6 +16,9 @@ class ScientistStudyType extends AbstractType
     {
         $builder
             ->add('title')
+            ->add('description', TextareaType::class,[
+                'attr' => ['maxlength' => 255]
+            ])
             ->add('file', VichFileType::class, [
                 'label' => 'Report (PDF File)',
                 'required' => is_null($builder->getData()->getPath()),

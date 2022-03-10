@@ -17,6 +17,10 @@
                     <a href="{{ vich_uploader_asset(study, 'file') }}">Link</a>
                 </td>
             </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ study.description??'Empty' }}</td>
+            </tr>
         </tbody>
     </table>
 

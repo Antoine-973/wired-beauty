@@ -8,6 +8,7 @@
         <thead>
             <tr>
                 <th>Title</th>
+                <th>Description</th>
                 <th>Link</th>
             </tr>
         </thead>
@@ -15,6 +16,7 @@
         {% for study in studies %}
             <tr>
                 <td>{{ study.title }}</td>
+                <td>{{ study.description|length > 30 ? study.description|slice(0, 28) ~ '...' : study.description }}</td>
                 <td>{% if study.path %}
                     <a href="{{ vich_uploader_asset(study, 'file') }}">Link</a>
                     {% else %}

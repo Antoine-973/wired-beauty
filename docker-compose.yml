@@ -10,9 +10,9 @@ services:
     image: postgres:13-alpine
     restart: always
     environment:
-        POSTGRES_PASSWORD: password
-        POSTGRES_DB: db
-        POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: db
+      POSTGRES_USER: postgres
     volumes:
       - db-data:/var/lib/postgresql/data:rw
     ports:
@@ -50,7 +50,6 @@ services:
       - ./docker/logs:/var/log
     depends_on:
       - php
-      - mailcatcher
     ports:
       - "80:80"
       - "443:443"
@@ -61,5 +60,5 @@ services:
       - "8080:80"
 
 volumes:
-  db-data: {}
-  app-cache: {}
+  db-data: { }
+  app-cache: { }

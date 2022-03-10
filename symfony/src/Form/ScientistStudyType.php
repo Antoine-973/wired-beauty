@@ -17,7 +17,7 @@ class ScientistStudyType extends AbstractType
             ->add('title')
             ->add('file', VichFileType::class, [
                 'label' => 'Report (PDF File)',
-                'required' => true,
+                'required' => is_null($builder->getData()->getPath()),
                 'constraints' => [
                     new File([
                         'maxSize' => '1024k',

@@ -32,8 +32,7 @@ class ScientistsStudiesController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            //dd( $study );
-            //$SSRepository->add($study);
+            //dd($study);
             $entityManager->persist($study);
             $entityManager->flush();
 

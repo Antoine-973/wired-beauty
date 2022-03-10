@@ -1,16 +1,9 @@
 import React from 'react';
 import { PDFExport, savePDF } from '@progress/kendo-react-pdf';
 import { useRef } from 'react';
-import Logo from '../../assets/images/logo.png';
+import Logo from '../../assets/images/logo-v2.png';
+import './PDF.scss';
 
-const PageTemplate = props => {
-    return (
-        <>
-            <p style={{position: 'absolute', left: '10px', bottom: '10px', fontSize:'13px'}}>Page {props.pageNum} of {props.totalPages}</p>
-            <img style={{height: '50px', position: 'absolute', right: '10px', bottom: '10px'}} src={Logo}/>
-        </>
-      );
-};
 
 export default function PDFRenderer({studyDetails, children}){
     const pdfExportComponent = useRef(null);
@@ -23,6 +16,23 @@ export default function PDFRenderer({studyDetails, children}){
     // const handleExportWithFunction = (event) => {
     //   savePDF(contentArea.current, { paperSize: "A4" });
     // }
+
+
+    const PageTemplate = props => {
+        return (
+            <>
+                {props.pageNum > 1 &&
+                    <img className='.center-x-axis'
+                        style={{height: '50px', position: 'absolute', top: '10px', left: '50%', transform: 'translateX(-50%)'}} 
+                        src={Logo}/>
+                }
+                <p className='.center-x-axis'
+                    style={{position: 'absolute', bottom: '30px', fontSize:'13px', left: '50%', transform: 'translateX(-50%)' }}>
+                    {props.pageNum}|{studyDetails?.title}
+                </p>
+            </>
+        );
+    };
 
     return(
         <div>
@@ -64,13 +74,36 @@ export default function PDFRenderer({studyDetails, children}){
                     title={studyDetails?.title??'no_name_study'}
                     fileName={studyDetails?.title ? studyDetails.title.split(' ').join('_'): 'no_name_study'}
                 >
-                    <div /*ref={contentArea}*/>
-                        <div style={{height: '742px', width: '470px', display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
-                            <h1 style={{fontSize: '44px', textAlign: 'center', width: '100%', marginTop: '-130px'}}>{studyDetails?.title}</h1>
+                    <div /*ref={contentArea}*/ className='pdf-content'>
+                        <div id="page-1" className='pdf-page'
+                            style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', position: 'relative'}}>
+                            
+                            <img src={Logo} style={{width: '130px'}} />
+                            <h1 style={{fontSize: '33px', fontWeight: 'bolder', width: '100%', textAlign: 'center', padding: 0, marginTop: '50px'}}>{studyDetails?.title}</h1>
+                            <p>Date</p>
+                           
+                            <svg style={{position: 'absolute', top: 0, left: 0}}
+                                width="112.5" height="138" viewBox="0 0 225 276" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M225 75L152.333 75L116 138L152.333 201" stroke="#13667A"/>
+                                <path d="M-2.46331e-06 72.5L36.5 9.71316L109.5 9.71316L146 72.5L109.5 135.287L36.5 135.287L-2.46331e-06 72.5Z" fill="#13667A" fill-opacity="0.25"/>
+                                <path d="M36.7867 265.854L0.579365 204L36.7867 142.146L109.213 142.146L145.421 204L109.213 265.854L36.7867 265.854Z" stroke="#13667A"/>
+                            </svg>
+
+                            <svg style={{position: 'absolute', top: 0, right: 0}}
+                                width="112.5" height="138" viewBox="0 0 225 276" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M-6.85736e-06 75L72.6667 75L109 138L72.6667 201" stroke="#13667A"/>
+                                <path d="M225 72.5L188.5 9.71316L115.5 9.71316L79 72.5L115.5 135.287L188.5 135.287L225 72.5Z" fill="#13667A" fill-opacity="0.25"/>
+                                <path d="M188.213 265.854L224.421 204L188.213 142.146L115.787 142.146L79.5794 204L115.787 265.854L188.213 265.854Z" stroke="#13667A"/>
+                            </svg>
+
+
                         </div>
-                        <p 
-                            style={{ marginTop: '100px'}}
-                            className='page-break'>{studyDetails?.subTitle}</p>
+                        {studyDetails?.subTitle && 
+                            <div id="page-2" className='pdf-page page-break' >
+                                <h3 style={{fontSize: '22px', fontWeight: 'bolder', textAlign: 'center', width: '100%', marginTop: '10px'}}>PREAMBLE</h3>
+                                <p>{studyDetails?.subTitle}</p>
+                            </div>
+                        }
                         {children}
                     </div>
                 </PDFExport>

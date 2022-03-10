@@ -34,8 +34,8 @@ class AccountRequest
     #[ORM\Column(type: 'text')]
     private $message;
 
-    // #[ORM\OneToOne(targetEntity: User::class, cascade: ['persist', 'remove'])]
-    // private $_user;
+    #[ORM\Column(type: 'boolean')]
+    private $isValid = false;
 
     public function getId(): ?int
     {
@@ -133,6 +133,18 @@ class AccountRequest
     public function setMessage(string $message): self
     {
         $this->message = $message;
+
+        return $this;
+    }
+
+    public function getIsValid(): ?bool
+    {
+        return $this->isValid;
+    }
+
+    public function setIsValid(bool $isValid): self
+    {
+        $this->isValid = $isValid;
 
         return $this;
     }

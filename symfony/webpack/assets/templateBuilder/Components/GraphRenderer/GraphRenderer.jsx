@@ -19,12 +19,15 @@ export default function GraphRenderer({graphData = []}){
         <>
             {graphData.length > 0 && 
             graphData.map( (graph, idx) =>
-                <div className={'page-break'}
+                <div className={'page-break pdf-page'}
                     //className={`${idx > 0 && 'page-break'}`}
                 >
-                    {graph?.details?.title && <h1>{graph.details.title}</h1>}
+                    {graph?.details?.title && <h3 style={{fontSize: '22px', fontWeight: 'bolder', textAlign: 'center', width: '100%', marginTop: '10px'}}>{graph.details.title}</h3>}
+                    {
+                        graph?.details?.description && 
+                        <p style={{ textAlign: 'justify', width: '100%'}}>{graph.details.description}</p>
+                    }
                     {_renderGraph(graph)}
-                    {graph?.details?.description && <p>{graph.details.description}</p>}
                 </div>
             )}
         </>

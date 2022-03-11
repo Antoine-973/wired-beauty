@@ -1,7 +1,8 @@
 .pdf-content{
     .pdf-page{
         height: 742px;
-        width: 470px,
+        width: 470px;
+        //border: 1px solid red;
     }
 
     h1, h2, h3, p{
@@ -10,12 +11,18 @@
 
     p{
         font-size: 10px;
+        font-weight: lighter;
     }
 
 }
 
-.center-x-axis{
-    position: absolute; /* postulat de départ */
-    left: 50%; /* à 50%/50% du parent référent */
-    transform: translateX(-50%); /* décalage de 50% de sa propre taille */
+.template-pdf{
+   *{
+    font-family: "Montserrat", sans-serif;
+   }
+
+   p{
+        color: #082C36;
+        font-weight: lighter;
+   }
 }

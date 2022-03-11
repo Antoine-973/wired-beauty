@@ -3,7 +3,7 @@ import { PDFExport, savePDF } from '@progress/kendo-react-pdf';
 import { useRef } from 'react';
 import Logo from '../../assets/images/logo-v2.png';
 import './PDF.scss';
-
+import moment from 'moment';
 
 export default function PDFRenderer({studyDetails, children}){
     const pdfExportComponent = useRef(null);
@@ -22,14 +22,22 @@ export default function PDFRenderer({studyDetails, children}){
         return (
             <>
                 {props.pageNum > 1 &&
-                    <img className='.center-x-axis'
-                        style={{height: '50px', position: 'absolute', top: '10px', left: '50%', transform: 'translateX(-50%)'}} 
+                <div style={{width: '100%', position: 'absolute', left: 0, top: '10px', display: 'flex', flexDirection: 'row', justifyContent: 'center', justifyItems: 'center'}}>
+                    <img
+                        style={{height: '30px'}} 
                         src={Logo}/>
+                </div>
                 }
-                <p className='.center-x-axis'
-                    style={{position: 'absolute', bottom: '30px', fontSize:'13px', left: '50%', transform: 'translateX(-50%)' }}>
-                    {props.pageNum}|{studyDetails?.title}
-                </p>
+                <div className='template-pdf'
+                    style={{position: 'absolute', bottom: '10px', fontSize:'13px', left: '50%', transform: 'translateX(-50%)', display: 'flex', alignItems: 'center' }}>
+                        <p style={{ fontSize: '10px', fontWeight: 'lighter' }}>
+                            {props.pageNum}
+                        </p>
+                        <p style={{padding: '0px 5px'}}>|</p>
+                        <p style={{ fontSize: '10px', fontFamily: 'Montserrat", sans-serif', color: '#082C36', textTransform: 'uppercase' }}>
+                            {studyDetails?.title}
+                        </p>
+                </div>
             </>
         );
     };
@@ -80,7 +88,7 @@ export default function PDFRenderer({studyDetails, children}){
                             
                             <img src={Logo} style={{width: '130px'}} />
                             <h1 style={{fontSize: '33px', fontWeight: 'bolder', width: '100%', textAlign: 'center', padding: 0, marginTop: '50px'}}>{studyDetails?.title}</h1>
-                            <p>Date</p>
+                            <p>{moment().format('YYYY-MM-DD').toString()}</p>
                            
                             <svg style={{position: 'absolute', top: 0, left: 0}}
                                 width="112.5" height="138" viewBox="0 0 225 276" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -101,7 +109,7 @@ export default function PDFRenderer({studyDetails, children}){
                         {studyDetails?.subTitle && 
                             <div id="page-2" className='pdf-page page-break' >
                                 <h3 style={{fontSize: '22px', fontWeight: 'bolder', textAlign: 'center', width: '100%', marginTop: '10px'}}>PREAMBLE</h3>
-                                <p>{studyDetails?.subTitle}</p>
+                                <p style={{ textAlign: 'justify', width: '100%'}}>{studyDetails?.subTitle}</p>
                             </div>
                         }
                         {children}

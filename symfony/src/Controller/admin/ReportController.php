@@ -41,6 +41,23 @@ class ReportController extends AbstractController
         ]);
     }
 
+    #[Route('/{id}/edit', name: 'app_report_edit', methods: ['GET', 'POST'])]
+    public function edit(Request $request, Report $report, ReportRepository $reportRepository): Response
+    {
+        $form = $this->createForm(ReportType::class, $report);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $reportRepository->add($report);
+            return $this->redirectToRoute('app_report_index', [], Response::HTTP_SEE_OTHER);
+        }
+
+        return $this->renderForm('admin/report/edit.html.twig', [
+            'user' => $report,
+            'form' => $form,
+        ]);
+    }
+
     #[Route('/{id}', name: 'app_report_delete', methods: ['POST'])]
     public function delete(Request $request, Report $report, ReportRepository $reportRepository): Response
     {

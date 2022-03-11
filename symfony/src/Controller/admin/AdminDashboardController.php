@@ -7,7 +7,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/admin')]
+#[Route('/{_locale<%app.supported_locales%>}/admin')]
+#[IsGranted('ROLE_ADMIN')]
 class AdminDashboardController extends AbstractController
 {
     #[Route('/', name: 'app_admin_dashboard')]

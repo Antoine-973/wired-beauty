@@ -22,7 +22,8 @@ use SymfonyCasts\Bundle\ResetPassword\Controller\ResetPasswordControllerTrait;
 use SymfonyCasts\Bundle\ResetPassword\Exception\ResetPasswordExceptionInterface;
 use SymfonyCasts\Bundle\ResetPassword\ResetPasswordHelperInterface;
 
-#[Route('/admin/user/request')]
+#[Route('/{_locale<%app.supported_locales%>}/admin/user/request')]
+#[IsGranted('ROLE_ADMIN')]
 class AdminAccountRequestController extends AbstractController
 {
     use ResetPasswordControllerTrait;
@@ -53,7 +54,7 @@ class AdminAccountRequestController extends AbstractController
     #[Route('/{id}/validate', name: 'app_admin_account_request_validate', methods: ['GET', 'POST'])]
     public function validate(Request $request, AccountRequest $accountRequest, AccountRequestRepository $accountRequestRepository, UserPasswordHasherInterface $userPasswordHasherInterface, UserRepository $userRepository, MailerInterface $mailer, TranslatorInterface $translator): Response
     {
-        if ($this->isCsrfTokenValid('validate'.$accountRequest->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('validate' . $accountRequest->getId(), $request->request->get('_token'))) {
             $accountRequest->setIsValid(true);
             $accountRequestRepository->add($accountRequest);
 
@@ -105,7 +106,7 @@ class AdminAccountRequestController extends AbstractController
     #[Route('/{id}', name: 'app_admin_account_request_delete', methods: ['POST'])]
     public function delete(Request $request, AccountRequest $accountRequest, AccountRequestRepository $accountRequestRepository): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$accountRequest->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete' . $accountRequest->getId(), $request->request->get('_token'))) {
             $accountRequestRepository->remove($accountRequest);
         }
 

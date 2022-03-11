@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New BuyReportRequest{% endblock %}
+
+{% block body %}
+    <h1>Create new BuyReportRequest</h1>
+
+    {{ include('buy_report_request/_form.html.twig') }}
+
+    <a href="{{ path('app_admin_buy_report_request_index') }}">back to list</a>
+{% endblock %}

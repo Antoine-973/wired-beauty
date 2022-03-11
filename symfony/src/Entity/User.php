@@ -42,9 +42,13 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(type: 'string', length: 20, nullable: true)]
     private $phone;
 
+    #[ORM\OneToMany(mappedBy: 'requester', targetEntity: BuyReportRequest::class, orphanRemoval: true)]
+    private $buyReportRequests;
+
     public function __construct()
     {
         $this->articles = new ArrayCollection();
+        $this->buyReportRequests = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -191,6 +195,36 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setPhone(?string $phone): self
     {
         $this->phone = $phone;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, BuyReportRequest>
+     */
+    public function getBuyReportRequests(): Collection
+    {
+        return $this->buyReportRequests;
+    }
+
+    public function addBuyReportRequest(BuyReportRequest $buyReportRequest): self
+    {
+        if (!$this->buyReportRequests->contains($buyReportRequest)) {
+            $this->buyReportRequests[] = $buyReportRequest;
+            $buyReportRequest->setRequester($this);
+        }
+
+        return $this;
+    }
+
+    public function removeBuyReportRequest(BuyReportRequest $buyReportRequest): self
+    {
+        if ($this->buyReportRequests->removeElement($buyReportRequest)) {
+            // set the owning side to null (unless already changed)
+            if ($buyReportRequest->getRequester() === $this) {
+                $buyReportRequest->setRequester(null);
+            }
+        }
 
         return $this;
     }

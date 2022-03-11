@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import Switch from "react-switch";
 import './Step1.scss';
 
@@ -8,6 +8,8 @@ export default function Step1({data, goNext, cancel}){
     const [ advancedMode, setAdvancedMode ] = useState(false);
     const [ setups, setSetups ]             = useState([]);
     const [ details, setDetails ]           = useState({});
+    const titleRef = useRef();
+    const descriptionRef = useRef();
 
     const newGraph = () => {
         try{
@@ -17,6 +19,8 @@ export default function Step1({data, goNext, cancel}){
                 if(selected[0] === null || selected[1] === null) throw new Error('Missing param(s)');
             }
             let tmpSetups = [...setups, {columns: selected, advancedMode, details}];
+            titleRef.current.value="";
+            descriptionRef.current.value="";
             setSetups(tmpSetups);
             setSelected([null, null, null]);
             setAdvancedMode(false);
@@ -67,6 +71,7 @@ export default function Step1({data, goNext, cancel}){
                 className='report-maker-input'
                 placeholder='Graphic title'
                 value={details?.title}
+                ref={titleRef}
                 onChange={e => setDetails({ ...details, title: e.target.value})}
                 type="text" />
             <label>Description</label>
@@ -74,6 +79,7 @@ export default function Step1({data, goNext, cancel}){
                 className='report-maker-input'
                 placeholder='Some description'
                 value={details?.description}
+                ref={descriptionRef}
                 onChange={e => setDetails({ ...details, description: e.target.value})}
                 type="text" />
 

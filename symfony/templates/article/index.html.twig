@@ -3,10 +3,11 @@
 {% block title %}{{ 'Article index'|trans }}{% endblock %}
 
 {% block body %}
+    <div class="w-100 p-3 mx-auto">
 
     <div class="w-100 p-3 mx-auto">
         <div class="text-center p-5">
-            <h1>{{ 'Articles'|trans }}</h1>
+            <h1>{{ 'Article index'|trans }}</h1>
             {% if is_granted('ROLE_ADMIN') %}
             <a class="wb-btn-primary btn" href="{{ path('app_article_new') }}">{{ 'Create new'|trans }}</a>
             {% endif %}
@@ -19,7 +20,8 @@
                         <div class="card-body">
                             <small>{{ article.createdBy.firstname }} {{ article.createdBy.lastname }} {{ article.createdAt|date('d-m-Y') }}</small>
                             <h5 class="card-title">{{ article.title }}</h5>
-                            <a class="wb-btn-primary btn" href="{{ path('app_article_show', {'slug': article.slug}) }}">{{ 'Show'|trans }}</a>
+                            <a class="wb-btn-primary btn"
+                               href="{{ path('app_article_show', {'slug': article.slug}) }}">{{ 'show'|trans }}</a>
                         </div>
                     </div>
                 </div>
@@ -29,5 +31,6 @@
                 </tr>
             {% endfor %}
         </div>
+    </div>
     </div>
 {% endblock %}

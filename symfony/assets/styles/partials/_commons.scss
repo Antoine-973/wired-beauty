@@ -25,8 +25,10 @@ header {
 }
 
 body {
-  //height: 100%;
+  min-height: 100%;
+  position: relative;
   padding-top: 60px;
+  padding-bottom: 140px;
 }
 
 .framed {
@@ -50,6 +52,10 @@ body {
 }
 
 footer {
+  height: 140px;
+  position: absolute;
+  bottom: 0;
+
   div {
     flex-basis: 25%;
   }

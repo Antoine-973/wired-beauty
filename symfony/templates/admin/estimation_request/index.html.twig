@@ -1,0 +1,41 @@
+{% extends 'admin.base.html.twig' %}
+
+{% block title %}Estimation Request{% endblock %}
+
+{% block body %}
+    <h1>Estimations Request</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>First_name</th>
+                <th>Last_name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Company</th>
+                <th>Message</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for estimation_request in estimation_requests %}
+            <tr>
+                <td>{{ estimation_request.firstName }}</td>
+                <td>{{ estimation_request.lastName }}</td>
+                <td>{{ estimation_request.email }}</td>
+                <td>{{ estimation_request.phone }}</td>
+                <td>{{ estimation_request.company }}</td>
+                <td>{{ estimation_request.message }}</td>
+                <td>
+                    <a class="btn wb-btn-primary" href="{{ path('app_admin_estimation_request_show', {'id': estimation_request.id}) }}">show</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

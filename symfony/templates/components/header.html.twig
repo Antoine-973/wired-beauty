@@ -44,6 +44,10 @@
             <a href="{{ path("app_article_index") }}" class="mx-3 text-uppercase wb-text-14">{{ 'blog'|trans }}</a>
             <a href="{{ path("estimation_index") }}"
                class="mx-3 text-uppercase wb-btn-primary wb-text-14">{{ 'estimation'|trans }}</a>
+            {% if is_granted('ROLE_CLIENT') %}
+            <a href="{{ path("app_order") }}"
+               class="mx-3 text-uppercase wb-btn-primary wb-text-14">{{ 'order'|trans }}</a>
+            {% endif %}
         </div>
 
         <div class="framed-l p-3">

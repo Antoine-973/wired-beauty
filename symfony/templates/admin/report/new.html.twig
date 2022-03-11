@@ -1,11 +1,13 @@
 {% extends 'admin.base.html.twig' %}
 
-{% block title %}{{ 'new report'|trans }}{% endblock %}
+{% block title %}{{ 'New report'|trans }}{% endblock %}
 
 {% block body %}
-    <h1>{{ 'new report'|trans }}</h1>
+    <h1>{{ 'New report'|trans }}</h1>
 
-    {{ include('admin/report/_form.html.twig') }}
+    <div>
+        {{ include('admin/report/_form.html.twig') }}
+    </div>
 
     <a href="{{ path('app_report_index') }}">back to list</a>
 {% endblock %}

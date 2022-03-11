@@ -11,11 +11,6 @@ fos_ck_editor:
             disallowedContent: ['script', '*[on*]']
             language: fr
             protectedSource: ['/\{\%%[\s\S]*?\%%\}/g', '/\{\#[\s\S]*?\#\}/g', '/{.*\".*}/g']
-            stylesSet: "base_style"
-    styles:
-      base_style:
-        - { name: "Blue Title", element: "h2", styles: { color: "Red" } }
-        - { name: "CSS Style", element: "span", attributes: { class: "my_style" } }
     toolbars:
       items:
         full.about: []

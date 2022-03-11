@@ -3,10 +3,14 @@
 {% block title %}{{ 'New Article'|trans }}{% endblock %}
 
 {% block body %}
-    <h1>{{ 'Create new Article'|trans }}</h1>
-    <div>
-        {{ include('article/_form.html.twig') }}
+    <div class="w-100 p-3 mx-auto">
+        <div class="text-center p-5">
+            <h1 class="mt-3 ml-5">{{ 'Create new Article'|trans }}</h1>
+            <a class="mt-3 ml-5" href="{{ path('app_article_index') }}">{{ 'Back to list'|trans }}</a>
+        </div>
 
-        <a href="{{ path('app_article_index') }}">{{ 'back to list'|trans }}</a>
+        <div class="">
+            {{ include('article/_form.html.twig') }}
+        </div>
     </div>
 {% endblock %}

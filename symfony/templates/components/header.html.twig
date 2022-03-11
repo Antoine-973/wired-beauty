@@ -6,23 +6,26 @@
     </div>
     <div class="d-flex align-items-center">
         <div class="p-3">
-            <span class="dropdown">
+            <div class="dropdown d-inline">
                 <a class="wb-text-primary d-inline dropdown-toggle mx-3 text-uppercase wb-text-14 nav-link dropdown-toggle"
                    href="#"
                    data-bs-toggle="dropdown">
                     {{ 'about us'|trans }}
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="wb-text-14 dropdown-item text-uppercase"
+                    <li>
+                        <a class="wb-text-14 dropdown-item text-uppercase"
                            href="{{ path("about_story_index") }}">{{ 'our story'|trans }}</a></li>
-                    <li><a class="wb-text-14 dropdown-item text-uppercase"
+                    <li>
+                        <a class="wb-text-14 dropdown-item text-uppercase"
                            href="{{ path("about_beliefs_index") }}">{{ 'our vision'|trans }}</a></li>
-                    <li><a href="{{ path("about_team_index") }}" class="wb-text-14 dropdown-item text-uppercase"
-                           href="#">{{ 'our team'|trans }}</a></li>
-                    <li><a class="wb-text-14 dropdown-item text-uppercase"
-                           href="#">{{ 'interview of founders'|trans }}</a></li>
+                    <li>
+                        <a class="wb-text-14 dropdown-item text-uppercase"
+                           href="{{ path("about_team_index") }}">{{ 'our team'|trans }}</a></li>
+                    <li>
+                        <a class="wb-text-14 dropdown-item text-uppercase">{{ 'interview of founders'|trans }}</a></li>
                 </ul>
-            </span>
+            </div>
             <span class="dropdown">
                 <a class="wb-text-primary d-inline dropdown-toggle mx-3 text-uppercase wb-text-14 nav-link dropdown-toggle"
                    href="#"
@@ -45,17 +48,25 @@
 
         <div class="framed-l p-3">
             {% if app.user %}
-                <span class="dropdown">
-                <a class="wb-text-primary d-inline dropdown-toggle mx-3 text-uppercase wb-text-14 nav-link dropdown-toggle"
-                   href="#"
-                   data-bs-toggle="dropdown">
-                     {{ "Hello"|trans }} {{ app.user.getFirstName() }}
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="wb-text-14 dropdown-item text-uppercase"
-                           href="{{ path("app_logout") }}">{{ 'Logout'|trans }}</a></li>
-                </ul>
-            </span>
+                <div class="d-inline dropdown">
+                    <a class="wb-text-primary d-inline dropdown-toggle mx-3 text-uppercase wb-text-14 nav-link dropdown-toggle"
+                       href="#"
+                       data-bs-toggle="dropdown">
+                        {{ "Hello"|trans }} {{ app.user.getFirstName() }}
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        {% if is_granted('ROLE_ADMIN') %}
+                            <li>
+                                <a class="wb-text-14 dropdown-item text-uppercase"
+                                   href="{{ path("app_admin_dashboard") }}">{{ 'dashboard'|trans }}</a>
+                            </li>
+                        {% endif %}
+                        <li>
+                            <a class="wb-text-14 dropdown-item text-uppercase"
+                               href="{{ path("app_logout") }}">{{ 'Logout'|trans }}</a>
+                        </li>
+                    </ul>
+                </div>
             {% else %}
                 <a href="{{ path("app_login") }}"><i class="fa-regular fa-user wb-text-primary"></i></a>
             {% endif %}

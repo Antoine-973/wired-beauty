@@ -1,51 +1,90 @@
 {% extends 'admin.base.html.twig' %}
 
-{% block title %}Hello AdminDashboardController!{% endblock %}
+{% block title %}{{ 'dashboard'|trans }}{% endblock %}
 
 {% block body %}
-
-<div>
-    <h1 class="h2">Dashboard</h1>
-    <p>This is the homepage of the admin interface</p>
-    <div class="row my-4">
-        <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
-            <div class="card">
-                <h5 class="card-header">Users</h5>
-                <div class="card-body">
-                    <h5 class="card-title">{{ users|length }}</h5>
+    <div>
+        <h1 class="h2">Dashboard</h1>
+        <p>This is the homepage of the admin interface</p>
+        <div class="row my-4">
+            <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
+                <div class="card">
+                    <h5 class="card-header">Users</h5>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ users|length }}</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-3">
+                <div class="card">
+                    <h5 class="card-header">Account request</h5>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ account_requests|length }}</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-3">
+                <div class="card">
+                    <h5 class="card-header">Estimation request</h5>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ estimation_requests|length }}</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-3">
+                <div class="card">
+                    <h5 class="card-header">Reports</h5>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ reports|length }}</h5>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-3">
-            <div class="card">
-                <h5 class="card-header">Account request</h5>
-                <div class="card-body">
-                    <h5 class="card-title">{{ account_requests|length }}</h5>
+        <div class="row">
+            <div class="col-12 col-xl-8 mb-4 mb-lg-0">
+                <div class="card">
+                    <h5 class="card-header">Latest estimation requests</h5>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th scope="col">{{ 'First Name'|trans }}</th>
+                                    <th scope="col">{{ 'Last Name'|trans }}</th>
+                                    <th scope="col">{{ 'Email'|trans }}</th>
+                                    <th scope="col">{{ 'Phone'|trans }}</th>
+                                    <th scope="col">{{ 'Company'|trans }}</th>
+                                    <th scope="col"></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for estimation in estimation_requests %}
+                                    <tr>
+                                        <td>{{ estimation.firstname }}</td>
+                                        <td>{{ estimation.lastname }}</td>
+                                        <td>{{ estimation.email }}</td>
+                                        <td>{{ estimation.phone }}</td>
+                                        <td>{{ estimation.company }}  </td>
+                                        <td>
+                                            <a href="{{ path('app_admin_estimation_request_show', {'id': estimation.id}) }}"
+                                               class="btn btn-sm btn-primary">View</a></td>
+                                    </tr>
+                                {% else %}
+                                    <tr>
+                                        <td colspan="7">no records found</td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                        <a href="{{ path('app_admin_estimation_request_index') }}" class="btn btn-block btn-light">View
+                            all</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-3">
-            <div class="card">
-                <h5 class="card-header">Estimation request</h5>
-                <div class="card-body">
-                    <h5 class="card-title">{{ estimation_requests|length }}</h5>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-3">
-            <div class="card">
-                <h5 class="card-header">Reports</h5>
-                <div class="card-body">
-                    <h5 class="card-title">{{ reports|length }}</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-12 col-xl-8 mb-4 mb-lg-0">
-            <div class="card">
-                <h5 class="card-header">Latest estimation requests</h5>
-                <div class="card-body">
+            <div class="col-12 col-xl-4">
+                <div class="card">
+                    <h5 class="card-header">Latest Account Request</h5>
                     <div class="table-responsive">
                         <table class="table">
                             <thead>
@@ -59,63 +98,28 @@
                             </tr>
                             </thead>
                             <tbody>
-                                {% for estimation in estimation_requests %}
-                                    <tr>
-                                        <td>{{ estimation.firstname }}</td>
-                                        <td>{{ estimation.lastname }}</td>
-                                        <td>{{ estimation.email }}</td>
-                                        <td>{{ estimation.phone }}</td>
-                                        <td>{{ estimation.company }}  </td>
-                                        <td><a href="{{ path('app_admin_estimation_request_show', {'id': estimation.id}) }}" class="btn btn-sm btn-primary">View</a></td>
-                                    </tr>
-                                {% else %}
-                                    <tr>
-                                        <td colspan="7">no records found</td>
-                                    </tr>
-                                {% endfor %}
+                            {% for account_request in account_requests %}
+                                <tr>
+                                    <th scope="row">{{ account_request.firstname }}</th>
+                                    <td>{{ account_request.lastname }}</td>
+                                    <td>{{ account_request.email }}</td>
+                                    <td>{{ account_request.phone }}</td>
+                                    <td>{{ account_request.company }}  </td>
+                                    <td>
+                                        <a href="{{ path('app_admin_account_request_show', {'id': account_request.id}) }}"
+                                           class="btn btn-sm btn-primary">View</a></td>
+                                </tr>
+                            {% else %}
+                                <tr>
+                                    <td colspan="7">No records found</td>
+                                </tr>
+                            {% endfor %}
                             </tbody>
                         </table>
                     </div>
-                    <a href="{{ path('app_admin_estimation_request_index') }}" class="btn btn-block btn-light">View all</a>
+                    <a href="{{ path('app_admin_account_request_index') }}" class="btn btn-block btn-light">View all</a>
                 </div>
-            </div>
-        </div>
-        <div class="col-12 col-xl-4">
-            <div class="card">
-                <h5 class="card-header">Latest Account Request</h5>
-                <div class="table-responsive">
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th scope="col">{{ 'First Name'|trans }}</th>
-                            <th scope="col">{{ 'Last Name'|trans }}</th>
-                            <th scope="col">{{ 'Email'|trans }}</th>
-                            <th scope="col">{{ 'Phone'|trans }}</th>
-                            <th scope="col">{{ 'Company'|trans }}</th>
-                            <th scope="col"></th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        {% for account_request in account_requests %}
-                            <tr>
-                                <th scope="row">{{ account_request.firstname }}</th>
-                                <td>{{ account_request.lastname }}</td>
-                                <td>{{ account_request.email }}</td>
-                                <td>{{ account_request.phone }}</td>
-                                <td>{{ account_request.company }}  </td>
-                                <td><a href="{{ path('app_admin_account_request_show', {'id': account_request.id}) }}" class="btn btn-sm btn-primary">View</a></td>
-                            </tr>
-                        {% else %}
-                            <tr>
-                                <td colspan="7">No records found</td>
-                            </tr>
-                        {% endfor %}
-                        </tbody>
-                    </table>
-                </div>
-                <a href="{{ path('app_admin_account_request_index') }}" class="btn btn-block btn-light">View all</a>
             </div>
         </div>
     </div>
-</div>
 {% endblock %}

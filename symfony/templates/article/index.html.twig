@@ -5,32 +5,32 @@
 {% block body %}
     <div class="w-100 p-3 mx-auto">
 
-    <div class="w-100 p-3 mx-auto">
-        <div class="text-center p-5">
-            <h1>{{ 'Article index'|trans }}</h1>
-            {% if is_granted('ROLE_ADMIN') %}
-            <a class="wb-btn-primary btn" href="{{ path('app_article_new') }}">{{ 'Create new'|trans }}</a>
-            {% endif %}
-        </div>
+        <div class="w-100 p-3 mx-auto">
+            <div class="text-center p-5">
+                <h1>{{ 'the blog'|trans }}</h1>
+                {% if is_granted('ROLE_ADMIN') %}
+                    <a class="wb-btn-primary btn" href="{{ path('app_article_new') }}">{{ 'Create new'|trans }}</a>
+                {% endif %}
+            </div>
 
-        <div class="row row-cols-1 row-cols-lg-5 g-2 g-lg-3">
-            {% for article in articles %}
-                <div class="col-sm-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <small>{{ article.createdBy.firstname }} {{ article.createdBy.lastname }} {{ article.createdAt|date('d-m-Y') }}</small>
-                            <h5 class="card-title">{{ article.title }}</h5>
-                            <a class="wb-btn-primary btn"
-                               href="{{ path('app_article_show', {'slug': article.slug}) }}">{{ 'show'|trans }}</a>
+            <div class="row row-cols-1 row-cols-lg-5 g-2 g-lg-3">
+                {% for article in articles %}
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <small>{{ article.createdBy.firstname }} {{ article.createdBy.lastname }} {{ article.createdAt|date('d-m-Y') }}</small>
+                                <h5 class="card-title">{{ article.title }}</h5>
+                                <a class="wb-btn-primary btn"
+                                   href="{{ path('app_article_show', {'slug': article.slug}) }}">{{ 'show'|trans }}</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            {% else %}
-                <tr>
-                    <td colspan="4">{{ 'no records found'|trans }}</td>
-                </tr>
-            {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan="4">{{ 'no records found'|trans }}</td>
+                    </tr>
+                {% endfor %}
+            </div>
         </div>
-    </div>
     </div>
 {% endblock %}

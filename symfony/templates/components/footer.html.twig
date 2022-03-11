@@ -1,27 +1,39 @@
-<footer class="d-flex framed-t w-100">
-    <div class="framed-r p-3 d-flex align-items-center justify-content-between">
+<footer class="row p-0 m-0 framed-t w-100">
+    <div class="col-3 framed-r p-3 d-flex align-items-center justify-content-between">
         <img src="/images/wb-logo.svg" alt="Wired Beauty" class="h-75"/>
-        <p class="wb-text-14 mt-auto">&copy; 2022, Wired Beauty</p>
+        <p class="wb-text-13 mt-auto">&copy; 2022, Wired Beauty</p>
     </div>
-    <div class="framed-r d-flex justify-content-between  p-3">
-        <div class="d-flex flex-column">
-            <a href="#" class="wb-text-14 text-uppercase">{{ 'about us'|trans }}</a>
-            <a href="#" class="wb-text-14 text-uppercase">{{ 'lab'|trans }}</a>
-            <a href="#" class="wb-text-14 text-uppercase">{{ 'blog'|trans }}</a>
-            <a href="#" class="wb-text-14 text-uppercase text-decoration-underline">Fr</a>
+    <div class="col-5 framed-r d-flex p-3">
+        <div class="d-flex flex-column flex-grow-1">
+            <strong class="text-uppercase">{{ 'about us'|trans }}</strong>
+            <a class="wb-text-13 ps-2 text-uppercase"
+               href="{{ path("about_story_index") }}">{{ 'our story'|trans }}</a>
+            <a class="wb-text-13 ps-2 text-uppercase"
+               href="{{ path("about_beliefs_index") }}">{{ 'our vision'|trans }}</a>
+            <a class="wb-text-13 ps-2 text-uppercase"
+               href="{{ path("about_team_index") }}">{{ 'our team'|trans }}</a>
+        </div>
+        <div class="d-flex flex-column flex-grow-1">
+            <strong class="text-uppercase">{{ 'lab'|trans }}</strong>
+            <a class="wb-text-13 ps-2 text-uppercase"
+               href="{{ path("factory_technologies_index") }}">{{ 'our technologies'|trans }}</a>
+            <a class="wb-text-13 ps-2 text-uppercase"
+               href="{{ path("factory_services_index") }}">{{ 'studies services'|trans }}</a>
+            <a class="wb-text-13 ps-2 text-uppercase"
+               href="{{ path("factory_validation_index") }}">{{ 'scientific validation'|trans }}</a>
         </div>
         <div>
             <a href="{{ path("estimation_index") }}"
-               class="mx-3 text-uppercase wb-btn-primary wb-text-14">{{ 'estimation'|trans }}</a>
+               class="mx-3 text-uppercase wb-btn-primary wb-text-13">{{ 'estimation'|trans }}</a>
         </div>
     </div>
-    <div class="d-flex flex-column framed-r p-3">
-        <a href="#" class="wb-text-14 text-uppercase">linkedin</a>
+    <div class="col-1 d-flex flex-column framed-r p-3">
+        <a href="#" class="wb-text-13 text-uppercase">linkedin</a>
     </div>
-    <div class="d-flex flex-column p-3">
-        <a href="{{ path("contact_index") }}" class="wb-text-14 text-uppercase">{{ 'contact us'|trans }}</a>
-        <a href="#" class="wb-text-14 text-uppercase">{{ 'privacy statement'|trans }}</a>
-        <a href="#" class="wb-text-14 text-uppercase">{{ 'legal'|trans }}</a>
-        <a href="#" class="wb-text-14 text-uppercase">{{ 'cookies policy'|trans }}</a>
+    <div class="col-2 d-flex flex-column p-3">
+        <a href="{{ path("contact_index") }}" class="wb-text-13 text-uppercase">{{ 'contact us'|trans }}</a>
+        <a href="#" class="wb-text-13 text-uppercase">{{ 'privacy statement'|trans }}</a>
+        <a href="#" class="wb-text-13 text-uppercase">{{ 'legal'|trans }}</a>
+        <a href="#" class="wb-text-13 text-uppercase">{{ 'cookies policy'|trans }}</a>
     </div>
 </footer>

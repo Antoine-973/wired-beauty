@@ -1,5 +1,8 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}{{ 'scientific validation'|trans }}{% endblock %}
+
+
 {% block body %}
     <div class="row w-100 align-items-center m-0" id="about-cover">
         <div class="col-4 p-0 d-flex justify-content-center align-items-center"
@@ -55,23 +58,26 @@
             {{ 'Find out the latest studies'|trans }}
         </h1>
         <div id="validation-studies">
-                {% for study in studies %}
-                    <div class="validation-study-item mx-auto">
-                        <div class="study-image ">
-                            <img src="{{ imgs[loop.index] }}" alt="report image"/>
-                        </div>
-                        <div class="study-data mx-auto">
-                            <h2>{{ study.title }}</h2>
-                            <p>{{ study.description }}</p>
+            {% for study in studies %}
+                <div class="validation-study-item mx-auto">
+                    <div class="study-image ">
+                        <img src="{{ imgs[loop.index] }}" alt="report image"/>
+                    </div>
+                    <div class="study-data mx-auto">
+                        <h2>{{ study.title }}</h2>
+                        <p>{{ study.description }}</p>
+                        <div class="study-data-button mt-auto">
                             {% if app.user %}
-                                <div class="study-data-button mt-auto">
-                                    <a class="wb-btn-primary text-uppercase"
-                                       href="{{ app.user ? vich_uploader_asset(study, 'file') : '#' }}">{{ 'READ'|trans }}</a>
-                                </div>
+                                <a class="wb-btn-primary text-uppercase"
+                                   href="{{ vich_uploader_asset(study, 'file') }}">{{ 'READ'|trans }}</a>
+                            {% else %}
+                                <a class="wb-btn-primary text-uppercase"
+                                   href="{{ path('app_login') }}">{{ 'LOGIN TO READ'|trans }}</a>
                             {% endif %}
                         </div>
                     </div>
-                {% endfor %}
+                </div>
+            {% endfor %}
         </div>
     </div>
 

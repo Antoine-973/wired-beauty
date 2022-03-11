@@ -1,13 +1,13 @@
 {% extends 'admin.base.html.twig' %}
 
-{% block title %}{{ 'New Study'|trans }}{% endblock %}
+{% block title %}{{ 'New Study'|trans|capitalize }}{% endblock %}
 
 {% block body %}
     <h1>{{ 'Add a new study'|trans }}</h1>
 
     {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <button class="btn wb-btn-primary">{{ button_label|default('Add') }}</button>
+    {{ form_widget(form) }}
+    <button class="btn wb-btn-primary">{{ button_label|default('Add') }}</button>
     {{ form_end(form) }}
 
     <a href="{{ path('app_scientists_studies_index') }}">{{ 'Back to list'|trans }}</a>

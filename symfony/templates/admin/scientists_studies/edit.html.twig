@@ -1,9 +1,9 @@
 {% extends 'admin.base.html.twig' %}
 
-{% block title %}Edit Study{% endblock %}
+{% block title %}{{ 'Edit study'|trans }}{% endblock %}
 
 {% block body %}
-    <h1>Edit Study</h1>
+    <h1>{{ 'Edit study'|trans }}</h1>
 
     {{ include('admin/scientists_studies/_form.html.twig', {'button_label': 'Update'}) }}
 

@@ -55,7 +55,7 @@
       </trans-unit>
       <trans-unit id="Gq05UIc" resname="IOT can save R&amp;D money and speed-up product launch tempo">
         <source>IOT can save R&amp;D money and speed-up product launch tempo</source>
-        <target>L'informatique peut faire économiser de l'argent à la R&amp;D et accélérer le rythme de lancement des produits.</target>
+        <target><![CDATA[L'informatique peut faire économiser de l'argent à la R&D et accélérer le rythme de lancement des produits.]]></target>
       </trans-unit>
       <trans-unit id="YQ15z3D" resname="Repeatability of protocols increases reliability of results">
         <source>Repeatability of protocols increases reliability of results</source>
@@ -140,7 +140,7 @@
       </trans-unit>
       <trans-unit id="HWc96cC" resname="beauty science &amp; proofs">
         <source>beauty science &amp; proofs</source>
-        <target>science de la beauté &amp; preuves</target>
+        <target><![CDATA[science de la beauté & preuves]]></target>
       </trans-unit>
       <trans-unit id="yzvrLxP" resname="Wired Beauty as of today is a saas based start-up co-founded by Stanislas and Sophie, two beauty&#10;                    experts">
         <source>Wired Beauty as of today is a saas based start-up co-founded by Stanislas and Sophie, two beauty
@@ -200,11 +200,11 @@
                 An entrepreneurial life with turn-arounds of a luxury brands backed by Private equity funds for followed
                 by 7 years of consulting Lucinda which she founded.
                 A passion for entrepreneurship as an impact investor and mentor</source>
-        <target>Une vie d'entreprise dans le secteur des produits de grande consommation de plus de 20 ans chez Colgate-Palmolive &amp; L'Oréal à des postes de marketing et de direction générale en Europe.
+        <target><![CDATA[Une vie d'entreprise dans le secteur des produits de grande consommation de plus de 20 ans chez Colgate-Palmolive & L'Oréal à des postes de marketing et de direction générale en Europe.
                                          de direction générale en Europe.
                                          Une vie d'entrepreneuse avec le redressement de marques de luxe soutenues par des fonds de capital-investissement, suivi de 7 années de conseil chez Lucinda qu'elle a fondée.
                                          suivi de 7 ans de conseil pour la société Lucinda qu'elle a fondée.
-                                         Une passion pour l'entrepreneuriat en tant qu'investisseur d'impact et mentor.</target>
+                                         Une passion pour l'entrepreneuriat en tant qu'investisseur d'impact et mentor.]]></target>
       </trans-unit>
       <trans-unit id="i0Lv41r" resname="President of Wired Beauty">
         <source>President of Wired Beauty</source>
@@ -683,9 +683,9 @@
         <source>QIMA Life Sciences (formerly Bioalternatives &amp; Synelvia) offers analytical services tailored to
                 skin biology. The assay offering ranges from virtual in silico screening to bioanalysis of non-invasive clinical samples
                 clinical samples, as well as in vitro and ex vivo tests.</source>
-        <target>QIMA Life Sciences (anciennement Bioalternatives &amp; Synelvia) offre des services analytiques adaptés à la
+        <target><![CDATA[QIMA Life Sciences (anciennement Bioalternatives & Synelvia) offre des services analytiques adaptés à la
                                          biologie de la peau. L'offre de tests va du criblage virtuel in silico à la bioanalyse d'échantillons cliniques non invasifs
-                                         échantillons cliniques, ainsi que des tests in vitro et ex vivo.</target>
+                                         échantillons cliniques, ainsi que des tests in vitro et ex vivo.]]></target>
       </trans-unit>
       <trans-unit id="AGh92L3" resname="École Centrale Paris, Intern of the Paris Hospitals, PhD">
         <source>École Centrale Paris, Intern of the Paris Hospitals, PhD</source>
@@ -694,6 +694,130 @@
       <trans-unit id="otKFs1K" resname="Decline">
         <source>Decline</source>
         <target>Refuser</target>
+      </trans-unit>
+      <trans-unit id="hFhhJod" resname="At Wired Beauty, we share your mission to create a healthier world for everyone. Your goals matter and we’re&#10;            here to help make sure they are met. Request information about our services so that we can meet your needs&#10;            using the form below.">
+        <source>At Wired Beauty, we share your mission to create a healthier world for everyone. Your goals matter and we’re
+            here to help make sure they are met. Request information about our services so that we can meet your needs
+            using the form below.</source>
+        <target>Chez Wired Beauty, nous partageons votre mission de créer un monde plus sain pour tous. Vos objectifs sont importants et nous sommes
+                            et nous sommes là pour vous aider à les atteindre. Demandez des informations sur nos services afin que nous puissions répondre à vos besoins
+                            en utilisant le formulaire ci-dessous.</target>
+      </trans-unit>
+      <trans-unit id="cKRES0w" resname="If an account matching your email exists, then an email was just sent that contains a link that you can use to reset your password. This link will expire in">
+        <source>If an account matching your email exists, then an email was just sent that contains a link that you can use to reset your password. This link will expire in</source>
+        <target>__If an account matching your email exists, then an email was just sent that contains a link that you can use to reset your password. This link will expire in</target>
+      </trans-unit>
+      <trans-unit id="woTj8wg" resname="Enter your email address and we will send you a&#10;                    link to reset your password.">
+        <source>Enter your email address and we will send you a
+                    link to reset your password.</source>
+        <target>__Enter your email address and we will send you a
+                    link to reset your password.</target>
+      </trans-unit>
+      <trans-unit id="XmHobNw" resname="how it works">
+        <source>how it works</source>
+        <target>comment ça marche</target>
+      </trans-unit>
+      <trans-unit id="P1Y3QQh" resname="READ">
+        <source>READ</source>
+        <target>LIRE</target>
+      </trans-unit>
+      <trans-unit id="CYkjJL." resname="New Study">
+        <source>New Study</source>
+        <target>Nouvelle étude</target>
+      </trans-unit>
+      <trans-unit id="6X5bIp." resname="Add a new study">
+        <source>Add a new study</source>
+        <target>Ajouter une nouvelle étude</target>
+      </trans-unit>
+      <trans-unit id="P.ViCwK" resname="Study">
+        <source>Study</source>
+        <target>Étude</target>
+      </trans-unit>
+      <trans-unit id="YvpaWw0" resname="Path">
+        <source>Path</source>
+        <target>Chemin d'accès</target>
+      </trans-unit>
+      <trans-unit id="Um4Ah8w" resname="Description">
+        <source>Description</source>
+        <target>Description</target>
+      </trans-unit>
+      <trans-unit id="d1tb_WR" resname="Created at">
+        <source>Created at</source>
+        <target>Créé le</target>
+      </trans-unit>
+      <trans-unit id="6tqYHH8" resname="Why choose Wired Beauty for your clinical study?">
+        <source>Why choose Wired Beauty for your clinical study?</source>
+        <target>Pourquoi choisir Wired Beauty pour votre étude clinique ?</target>
+      </trans-unit>
+      <trans-unit id="oRiE74B" resname="Wired Beauty offers you qualitative and quantitative data, with real-time monitoring.&#10;                            You will also have the testers' feedback on your product.">
+        <source>Wired Beauty offers you qualitative and quantitative data, with real-time monitoring.
+                            You will also have the testers' feedback on your product.</source>
+        <target>Wired Beauty vous offre des données qualitatives et quantitatives, avec un suivi en temps réel.
+                                            Vous aurez également le retour des testeurs sur votre produit.</target>
+      </trans-unit>
+      <trans-unit id="At0jONt" resname="What is Wired Beauty's technology?">
+        <source>What is Wired Beauty's technology?</source>
+        <target>Quelle est la technologie de Wired Beauty ?</target>
+      </trans-unit>
+      <trans-unit id="oqEkIAe" resname="Wired Beauty asks testers to place patches on 2 cheeks that are not treated in the same way,&#10;                            these results are sent to a connected box that receives the data, which is sent back to the&#10;                            application in the user's smartphone. This data automatically generates reports that&#10;                            scientists can consult.">
+        <source>Wired Beauty asks testers to place patches on 2 cheeks that are not treated in the same way,
+                            these results are sent to a connected box that receives the data, which is sent back to the
+                            application in the user's smartphone. This data automatically generates reports that
+                            scientists can consult.</source>
+        <target>Wired Beauty demande aux testeurs de placer des patchs sur 2 joues qui ne sont pas traitées de la même manière,
+                                            ces résultats sont envoyés à un boîtier connecté qui reçoit les données, lesquelles sont renvoyées à l'application
+                                            application dans le smartphone de l'utilisateur. Ces données génèrent automatiquement des rapports que
+                                            scientifiques peuvent consulter.</target>
+      </trans-unit>
+      <trans-unit id="uYn7D37" resname="Who are the founders of Wired Beauty?">
+        <source>Who are the founders of Wired Beauty?</source>
+        <target>Qui sont les fondateurs de Wired Beauty ?</target>
+      </trans-unit>
+      <trans-unit id="HLUlky2" resname="Stanislas Vandier Entrepreneur in dermo-cosmetics and digital with 10 years of experience at&#10;                            L'Oréal in marketing and business unit management &amp; Sophie La Tanneur More than 20 years of&#10;                            FMCG corporate life at Colgate-Palmolive &amp; L'Oréal in marketing and general management&#10;                            positions in Europe.">
+        <source>Stanislas Vandier Entrepreneur in dermo-cosmetics and digital with 10 years of experience at
+                            L'Oréal in marketing and business unit management &amp; Sophie La Tanneur More than 20 years of
+                            FMCG corporate life at Colgate-Palmolive &amp; L'Oréal in marketing and general management
+                            positions in Europe.</source>
+        <target><![CDATA[Stanislas Vandier Entrepreneur dans la dermo-cosmétique et le digital avec 10 ans d'expérience chez
+                                                     L'Oréal dans le marketing et la gestion d'unité d'affaires & Sophie La Tanneur Plus de 20 ans de
+                                                     vie d'entreprise dans le secteur des produits de grande consommation chez Colgate-Palmolive et L'Oréal, à des postes de marketing et de direction générale en Europe.
+                                                     dans des postes de marketing et de direction générale en Europe.]]></target>
+      </trans-unit>
+      <trans-unit id="Zs2WiKK" resname="dashboard">
+        <source>dashboard</source>
+        <target>__dashboard</target>
+      </trans-unit>
+      <trans-unit id="sNUpZVJ" resname="LOGIN TO READ">
+        <source>LOGIN TO READ</source>
+        <target>CONNECTEZ-VOUS POUR LIRE</target>
+      </trans-unit>
+      <trans-unit id="_yCVNx2" resname="Edit study">
+        <source>Edit study</source>
+        <target>Modifier l'étude</target>
+      </trans-unit>
+      <trans-unit id="wKzs7fz" resname="Studies">
+        <source>Studies</source>
+        <target>Études</target>
+      </trans-unit>
+      <trans-unit id="fyYQT3e" resname="reports">
+        <source>reports</source>
+        <target>rapports d'études</target>
+      </trans-unit>
+      <trans-unit id="DkXGcYl" resname="new report">
+        <source>new report</source>
+        <target>nouveau rapport</target>
+      </trans-unit>
+      <trans-unit id="qEUz2hf" resname="estimation request">
+        <source>estimation request</source>
+        <target>Devis</target>
+      </trans-unit>
+      <trans-unit id="kGx.9Hz" resname="articles">
+        <source>articles</source>
+        <target>articles</target>
+      </trans-unit>
+      <trans-unit id="evuMbRm" resname="the blog">
+        <source>the blog</source>
+        <target>le blog</target>
       </trans-unit>
     </body>
   </file>

@@ -24,9 +24,6 @@
   transition: .5s
 }
 
-a {
-  text-decoration: none
-}
 
 .header {
   width: 100%;
@@ -119,7 +116,7 @@ a {
   font-size: 1.25rem
 }
 
-.show {
+.l-navbar.show {
   left: 0
 }
 
@@ -168,7 +165,7 @@ a {
     padding: 1rem 1rem 0 0
   }
 
-  .show {
+  .l-navbar.show {
     width: calc(var(--nav-width) + 156px)
   }
 

@@ -1,9 +1,9 @@
 {% extends 'admin.base.html.twig' %}
 
-{% block title %}New Report{% endblock %}
+{% block title %}{{ 'new report'|trans }}{% endblock %}
 
 {% block body %}
-    <h1>Create new Report</h1>
+    <h1>{{ 'new report'|trans }}</h1>
 
     {{ include('admin/report/_form.html.twig') }}
 

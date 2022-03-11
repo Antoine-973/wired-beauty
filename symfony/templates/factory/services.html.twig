@@ -1,10 +1,13 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}{{ 'studies services'|trans }}{% endblock %}
+
+
 {% block body %}
     <div class="row w-100 align-items-center m-0" id="about-cover">
         <div class="col-4 p-0 d-flex justify-content-center align-items-center"
              style="background-image: url('/images/hex-bg.png')">
-            <h1 class="text-uppercase wb-text-white">studies services</h1>
+            <h1 class="text-uppercase wb-text-white">{{ "studies services"|trans }}</h1>
         </div>
         <div class="col-8 p-0">
             <img src="/images/microscope.png" alt="cover" class="w-100"/>

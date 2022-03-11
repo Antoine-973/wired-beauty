@@ -9,6 +9,11 @@ html {
 a {
   text-decoration: none;
   color: inherit;
+
+  &:hover, &:focus {
+    color: inherit !important;
+    text-decoration: underline;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -25,8 +30,10 @@ header {
 }
 
 body {
-  //height: 100%;
+  min-height: 100%;
+  position: relative;
   padding-top: 60px;
+  padding-bottom: 140px;
 }
 
 .framed {
@@ -50,6 +57,10 @@ body {
 }
 
 footer {
+  height: 140px;
+  position: absolute;
+  bottom: 0;
+
   div {
     flex-basis: 25%;
   }
@@ -84,6 +95,10 @@ footer {
 
 ul.dropdown-menu {
   min-width: fit-content;
+}
+
+.dropdown-item:active {
+  background-color: white !important;
 }
 
 #tidio-chat {

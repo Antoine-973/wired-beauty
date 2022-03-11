@@ -46,15 +46,33 @@
         </div>
     </div>
 
-
     <div class="w-100 framed-t framed-b">
         <img src="/images/lines.svg" alt="lines" class="w-100"/>
     </div>
+
     <div class="text-center my-5">
-        <h1 class="text-uppercase">
+        <h1 class="text-uppercase mb-5">
             {{ 'Find out the latest studies'|trans }}
-            {# TODO: liste des articles (pdf) scientifiques (non cliquable si non connecté) #}
         </h1>
+        <div id="validation-studies">
+                {% for study in studies %}
+                    <div class="validation-study-item mx-auto">
+                        <div class="study-image ">
+                            <img src="{{ imgs[loop.index] }}" alt="report image"/>
+                        </div>
+                        <div class="study-data mx-auto">
+                            <h2>{{ study.title }}</h2>
+                            <p>{{ study.description }}</p>
+                            {% if app.user %}
+                                <div class="study-data-button mt-auto">
+                                    <a class="wb-btn-primary text-uppercase"
+                                       href="{{ app.user ? vich_uploader_asset(study, 'file') : '#' }}">{{ 'READ'|trans }}</a>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+        </div>
     </div>
 
 {% endblock %}

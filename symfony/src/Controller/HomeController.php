@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\ScientistStudyRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -46,9 +47,20 @@ class HomeController extends AbstractController
     }
 
     #[Route('validation', name: 'factory_validation_index', methods: ['GET'])]
-    public function validation(): Response
+    public function validation(ScientistStudyRepository $scientistStudyRepository): Response
     {
-        return $this->render('factory/validation.html.twig');
+        $imgs = [
+            'https://images.pexels.com/photos/46168/space-telescope-mirror-segments-james-webb-cosmos-46168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+            'https://images.pexels.com/photos/4299431/pexels-photo-4299431.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+            'https://images.pexels.com/photos/132477/pexels-photo-132477.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+            'https://images.pexels.com/photos/60582/newton-s-cradle-balls-sphere-action-60582.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+            'https://images.pexels.com/photos/2506594/pexels-photo-2506594.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'
+        ];
+
+        return $this->render('factory/validation.html.twig', [
+            'studies' => $scientistStudyRepository->findAll(),
+            'imgs' => $imgs
+        ]);
     }
 
     #[Route('excel', name: 'excel_parser', methods: ['GET'])]

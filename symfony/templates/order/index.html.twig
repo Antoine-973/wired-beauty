@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Your Orders{% endblock %}
+
+{% block body %}
+    <div class="p-5 w-75 mx-auto">
+        <div class="text-center mb-5">
+            <h1 class="wb-text-48 text-uppercase">{{ 'Your Orders'|trans }}</h1>
+        </div>
+
+        <h2>{{ 'Reports'|trans }}</h2>
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">{{ 'Title'|trans }}</th>
+                <th scope="col">{{ 'Description'|trans }}</th>
+                <th scope="col">{{ 'Created at'|trans }}</th>
+                <th scope="col">{{ 'actions'|trans }}</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for report in reports %}
+                <tr>
+                    <td>{{ report.title }}</td>
+                    <td>{{ report.description }}</td>
+                    <td>{{ report.createdAt ? report.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                    <td>
+                        {% if report.path %}
+                            <a href="{{ vich_uploader_asset(report, 'file') }}">Show</a>
+                        {% else %}
+                            Unknown
+                        {% endif %}
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="7">no records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

@@ -63,12 +63,6 @@ class HomeController extends AbstractController
         ]);
     }
 
-    #[Route('excel', name: 'excel_parser', methods: ['GET'])]
-    public function excelParser(): Response
-    {
-        return $this->render('react/index.html.twig');
-    }
-
     #[Route('privacy-policy', name: 'privacy_policy_index', methods: ['GET'])]
     public function privacy(): Response
     {

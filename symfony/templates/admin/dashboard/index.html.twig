@@ -4,12 +4,12 @@
 
 {% block body %}
     <div>
-        <h1 class="h2">Dashboard</h1>
-        <p>This is the homepage of the admin interface</p>
+        <h1 class="h2">{{ 'Dashboard'|trans }}</h1>
+        <p>{{ 'This is the homepage of the admin interface'|trans }}</p>
         <div class="row my-4">
             <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
                 <div class="card">
-                    <h5 class="card-header">Users</h5>
+                    <h5 class="card-header">{{ 'Users'|trans }}</h5>
                     <div class="card-body">
                         <h5 class="card-title">{{ users|length }}</h5>
                     </div>
@@ -17,7 +17,7 @@
             </div>
             <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-3">
                 <div class="card">
-                    <h5 class="card-header">Account request</h5>
+                    <h5 class="card-header">{{ 'Account request'|trans }}</h5>
                     <div class="card-body">
                         <h5 class="card-title">{{ account_requests|length }}</h5>
                     </div>
@@ -25,7 +25,7 @@
             </div>
             <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-3">
                 <div class="card">
-                    <h5 class="card-header">Estimation request</h5>
+                    <h5 class="card-header">{{ 'Estimation request'|trans }}</h5>
                     <div class="card-body">
                         <h5 class="card-title">{{ estimation_requests|length }}</h5>
                     </div>
@@ -33,7 +33,7 @@
             </div>
             <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-3">
                 <div class="card">
-                    <h5 class="card-header">Reports</h5>
+                    <h5 class="card-header">{{ 'Reports'|trans }}</h5>
                     <div class="card-body">
                         <h5 class="card-title">{{ reports|length }}</h5>
                     </div>
@@ -43,7 +43,7 @@
         <div class="row">
             <div class="col-12 col-xl-8 mb-4 mb-lg-0">
                 <div class="card">
-                    <h5 class="card-header">Latest estimation requests</h5>
+                    <h5 class="card-header">{{ 'Latest estimation requests'|trans }}</h5>
                     <div class="card-body">
                         <div class="table-responsive">
                             <table class="table">

@@ -7,7 +7,7 @@
 
         <div class="w-100 p-3 mx-auto">
             <div class="text-center p-5">
-                <h1>{{ 'the blog'|trans }}</h1>
+                <h1>{{ 'The blog'|trans }}</h1>
                 {% if is_granted('ROLE_ADMIN') %}
                     <a class="wb-btn-primary btn" href="{{ path('app_article_new') }}">{{ 'Create new'|trans }}</a>
                 {% endif %}

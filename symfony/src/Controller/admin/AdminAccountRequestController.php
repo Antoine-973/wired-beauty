@@ -39,7 +39,7 @@ class AdminAccountRequestController extends AbstractController
     public function index(AccountRequestRepository $accountRequestRepository): Response
     {
         return $this->render('admin/account_request/index.html.twig', [
-            'account_requests' => $accountRequestRepository->findBy(['isValid' => '0'],),
+            'account_requests' => $accountRequestRepository->findBy(['isValid' => '0']),
         ]);
     }
 

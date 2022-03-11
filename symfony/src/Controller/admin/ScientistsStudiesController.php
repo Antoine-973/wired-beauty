@@ -12,12 +12,11 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 #[IsGranted('ROLE_ADMIN')]
-#[Route('/admin/scientistsStudies')]
-
+#[Route('/{_locale<%app.supported_locales%>}/admin/scientistsStudies')]
 class ScientistsStudiesController extends AbstractController
 {
     #[Route('/', name: 'app_scientists_studies_index')]
-    public function index( ScientistStudyRepository $SSRepository ): Response
+    public function index(ScientistStudyRepository $SSRepository): Response
     {
         return $this->render('admin/scientists_studies/index.html.twig', [
             'studies' => $SSRepository->findAll()
@@ -25,7 +24,7 @@ class ScientistsStudiesController extends AbstractController
     }
 
     #[Route('/new', name: 'app_scientists_studies_new', methods: ['GET', 'POST'])]
-    public function newStudy( ScientistStudyRepository $SSRepository, Request $request, EntityManagerInterface $entityManager ): Response
+    public function newStudy(ScientistStudyRepository $SSRepository, Request $request, EntityManagerInterface $entityManager): Response
     {
         $study = new ScientistStudy();
         $form = $this->createForm(ScientistStudyType::class, $study);
@@ -46,7 +45,7 @@ class ScientistsStudiesController extends AbstractController
     }
 
     #[Route('/{id}', name: 'app_scientists_studies_show', methods: ['GET'])]
-    public function show( ScientistStudy $study ): Response
+    public function show(ScientistStudy $study): Response
     {
         return $this->render('admin/scientists_studies/show.html.twig', [
             'study' => $study,
@@ -54,7 +53,7 @@ class ScientistsStudiesController extends AbstractController
     }
 
     #[Route('/{id}/edit', name: 'app_scientists_studies_edit', methods: ['GET', 'POST'])]
-    public function edit( ScientistStudyRepository $SSRepository, ScientistStudy $study, Request $request ): Response
+    public function edit(ScientistStudyRepository $SSRepository, ScientistStudy $study, Request $request): Response
     {
         $form = $this->createForm(ScientistStudyType::class, $study);
         $form->handleRequest($request);
@@ -71,9 +70,9 @@ class ScientistsStudiesController extends AbstractController
     }
 
     #[Route('/{id}', name: 'app_scientists_studies_delete', methods: ['POST'])]
-    public function delete(Request $request, ScientistStudy $study, ScientistStudyRepository $SSRepository ): Response
+    public function delete(Request $request, ScientistStudy $study, ScientistStudyRepository $SSRepository): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$study->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete' . $study->getId(), $request->request->get('_token'))) {
             $SSRepository->remove($study);
         }
 

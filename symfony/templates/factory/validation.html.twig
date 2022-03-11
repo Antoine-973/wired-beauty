@@ -46,16 +46,15 @@
         </div>
     </div>
 
-    {% if is_granted('ROLE_SCIENTIST') %}
-        <div class="w-100 framed-t framed-b">
-            <img src="/images/lines.svg" alt="lines" class="w-100"/>
-        </div>
-        <div class="text-center my-5">
-            <h1 class="text-uppercase">
-                {{ 'Find out the latest studies'|trans }}
-                {# TODO: front des articles scientifiques #}
-            </h1>
-        </div>
-    {% endif %}
+
+    <div class="w-100 framed-t framed-b">
+        <img src="/images/lines.svg" alt="lines" class="w-100"/>
+    </div>
+    <div class="text-center my-5">
+        <h1 class="text-uppercase">
+            {{ 'Find out the latest studies'|trans }}
+            {# TODO: liste des articles (pdf) scientifiques (non cliquable si non connecté) #}
+        </h1>
+    </div>
 
 {% endblock %}

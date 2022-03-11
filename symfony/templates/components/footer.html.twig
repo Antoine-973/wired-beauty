@@ -28,12 +28,14 @@
         </div>
     </div>
     <div class="col-1 d-flex flex-column framed-r p-3">
-        <a href="https://www.linkedin.com/company/wb-technologies/?originalSubdomain=fr" class="wb-text-13 text-uppercase">linkedin</a>
+        <a href="https://www.linkedin.com/company/wb-technologies/?originalSubdomain=fr"
+           class="wb-text-13 text-uppercase">linkedin</a>
     </div>
     <div class="col-2 d-flex flex-column p-3">
         <a href="{{ path("contact_index") }}" class="wb-text-13 text-uppercase">{{ 'contact us'|trans }}</a>
-        <a href="#" class="wb-text-13 text-uppercase">{{ 'privacy statement'|trans }}</a>
-        <a href="#" class="wb-text-13 text-uppercase">{{ 'legal'|trans }}</a>
-        <a href="#" class="wb-text-13 text-uppercase">{{ 'cookies policy'|trans }}</a>
+        <a href="{{ path("privacy_policy_index") }}"
+           class="wb-text-13 text-uppercase">{{ 'privacy statement'|trans }}</a>
+        <a href="{{ path("privacy_policy_index") }}" class="wb-text-13 text-uppercase">{{ 'legal'|trans }}</a>
+        <a href="{{ path("privacy_policy_index") }}" class="wb-text-13 text-uppercase">{{ 'cookies policy'|trans }}</a>
     </div>
 </footer>

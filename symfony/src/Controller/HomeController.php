@@ -69,4 +69,9 @@ class HomeController extends AbstractController
         return $this->render('react/index.html.twig');
     }
 
+    #[Route('privacy-policy', name: 'privacy_policy_index', methods: ['GET'])]
+    public function privacy(): Response
+    {
+        return $this->render('privacy.html.twig');
+    }
 }

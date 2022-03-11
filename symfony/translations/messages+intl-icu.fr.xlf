@@ -819,6 +819,30 @@
         <source>the blog</source>
         <target>le blog</target>
       </trans-unit>
+      <trans-unit id="K3KBHV8" resname="privacy policy">
+        <source>privacy policy</source>
+        <target>Politique de confidentialité</target>
+      </trans-unit>
+      <trans-unit id="kBUuwTM" resname="renewal of the brand">
+        <source>renewal of the brand</source>
+        <target>renouveau de la marque</target>
+      </trans-unit>
+      <trans-unit id="2syjy6P" resname="Reports">
+        <source>Reports</source>
+        <target>Rapports</target>
+      </trans-unit>
+      <trans-unit id="Fvd2_lj" resname="New report">
+        <source>New report</source>
+        <target>Nouveau rapport</target>
+      </trans-unit>
+      <trans-unit id="TqFAWIF" resname="home">
+        <source>home</source>
+        <target>Accueil</target>
+      </trans-unit>
+      <trans-unit id="v.48Y19" resname="The blog">
+        <source>The blog</source>
+        <target>Blog</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

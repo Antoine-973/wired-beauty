@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{ 'Reset your password'|trans }}{% endblock %}
+{% block title %}{{ 'Reset your password'|trans|capitalize }}{% endblock %}
 
 {% block body %}
     <div class="row w-100 p-0 m-0" id="loginPage">
@@ -11,7 +11,6 @@
             {% endfor %}
 
             <h1 class="h3 mb-3 font-weight-normal text-uppercase">{{ 'Reset your password'|trans }}</h1>
-
 
             <div class="col-12 d-flex flex-column">
                 {{ form_widget(resetForm.plainPassword, {'attr': {'class': 'form-control'}}) }}

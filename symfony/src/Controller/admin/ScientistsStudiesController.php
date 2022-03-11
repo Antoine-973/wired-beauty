@@ -2,17 +2,18 @@
 
 namespace App\Controller\admin;
 
-use Doctrine\ORM\EntityManagerInterface;
-use App\Form\ScientistStudyType;
 use App\Entity\ScientistStudy;
+use App\Form\ScientistStudyType;
+use Doctrine\ORM\EntityManagerInterface;
 use App\Repository\ScientistStudyRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-#[IsGranted('ROLE_ADMIN')]
 #[Route('/{_locale<%app.supported_locales%>}/admin/scientistsStudies')]
+#[IsGranted('ROLE_ADMIN')]
 class ScientistsStudiesController extends AbstractController
 {
     #[Route('/', name: 'app_scientists_studies_index')]

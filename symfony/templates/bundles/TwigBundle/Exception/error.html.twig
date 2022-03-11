@@ -1,0 +1,13 @@
+{% extends 'error.base.html.twig' %}
+
+{% block body %}
+    <h1>Page not found</h1>
+
+    <p>
+        <small>The requested page couldn't be located.</small>
+    </p>
+    <p>
+        <small>Checkout for any URL misspelling or</small>
+        <a class="btn wb-btn-primary text-uppercase" href="{{ path('home_index') }}">Return to the homepage</a>.
+    </p>
+{% endblock %}

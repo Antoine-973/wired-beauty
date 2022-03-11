@@ -69,7 +69,7 @@ class ReportController extends AbstractController
     }
 
 
-    #[Route('/maker', name: 'app_report_marker', methods: ['GET'])]
+    #[Route('/maker', name: 'app_report_maker', methods: ['GET'])]
     public function reportMaker(): Response
     {
         return $this->render('admin/react/index.html.twig');

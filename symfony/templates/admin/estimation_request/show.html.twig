@@ -1,0 +1,40 @@
+{% extends 'admin.base.html.twig' %}
+
+{% block title %}Estimation Request{% endblock %}
+
+{% block body %}
+    <h1>Estimation Request</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>First_name</th>
+                <td>{{ estimation_request.firstName }}</td>
+            </tr>
+            <tr>
+                <th>Last_name</th>
+                <td>{{ estimation_request.lastName }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ estimation_request.email }}</td>
+            </tr>
+            <tr>
+                <th>Phone</th>
+                <td>{{ estimation_request.phone }}</td>
+            </tr>
+            <tr>
+                <th>Company</th>
+                <td>{{ estimation_request.company }}</td>
+            </tr>
+            <tr>
+                <th>Message</th>
+                <td>{{ estimation_request.message }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_admin_estimation_request_index') }}">back to list</a>
+
+    {{ include('admin/estimation_request/_delete_form.html.twig') }}
+{% endblock %}

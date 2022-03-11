@@ -96,8 +96,7 @@ export default function Step2({configs, excelData, studyDetails}){
     }, [excelRows]);
 
     return(
-        <div style={{display: 'flex', flexDirection: 'column', width: '30%'}}>
-            <h3>Step 3</h3>
+        <div style={{display: 'flex', flexDirection: 'column', width: '100%'}}>
             {data.length > 0 && 
             <PDFRenderer studyDetails={studyDetails}>
                 <GraphRenderer graphData={data} />

@@ -4,30 +4,24 @@
 
 {% block body %}
     <h1>{{ 'Article index'|trans }}</h1>
+    <a class="wb-btn-primary btn" href="{{ path('app_article_new') }}">{{ 'Create new'|trans }}</a>
 
-    <table class="table">
-        <thead>
-        <tr>
-            <th>{{ 'Title'|trans }}</th>
-            <th>{{ 'actions'|trans }}</th>
-        </tr>
-        </thead>
-        <tbody>
-        {% for article in articles %}
-            <tr>
-                <td>{{ article.title }}</td>
-                <td>
-                    <a href="{{ path('app_article_show', {'slug': article.slug}) }}">{{ 'show'|trans }}</a>
-                    <a href="{{ path('app_article_edit', {'slug': article.slug}) }}">{{ 'edit'|trans }}</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="4">{{ 'no records found'|trans }}</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
 
-    <a href="{{ path('app_article_new') }}">{{ 'Create new'|trans }}</a>
+        <div class="row row-cols-1 row-cols-lg-5 g-2 g-lg-3">
+            {% for article in articles %}
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <small>{{ article.createdBy.firstname }} {{ article.createdBy.lastname }} {{ article.createdAt|date('d-m-Y') }}</small>
+                                <h5 class="card-title">{{ article.title }}</h5>
+                                <a class="wb-btn-primary btn" href="{{ path('app_article_show', {'slug': article.slug}) }}">{{ 'show'|trans }}</a>
+                            </div>
+                        </div>
+                    </div>
+            {% else %}
+                    <tr>
+                        <td colspan="4">{{ 'no records found'|trans }}</td>
+                    </tr>
+                {% endfor %}
+        </div>
 {% endblock %}

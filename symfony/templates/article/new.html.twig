@@ -4,8 +4,9 @@
 
 {% block body %}
     <h1>{{ 'Create new Article'|trans }}</h1>
+    <div>
+        {{ include('article/_form.html.twig') }}
 
-    {{ include('article/_form.html.twig') }}
-
-    <a href="{{ path('app_article_index') }}">{{ 'back to list'|trans }}</a>
+        <a href="{{ path('app_article_index') }}">{{ 'back to list'|trans }}</a>
+    </div>
 {% endblock %}

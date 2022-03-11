@@ -68,9 +68,9 @@
                 </a>
                 <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-language">
                     <li><a class="dropdown-item"
-                           href="{{ path(app.request.get('_route'), {_locale: 'en'}) }}">EN</a></li>
+                           href="{{ path('home_index', {_locale: 'en'}) }}">EN</a></li>
                     <li><a class="dropdown-item"
-                           href="{{ path(app.request.get('_route'), {_locale: 'fr'}) }}">FR</a></li>
+                           href="{{ path('home_index', {_locale: 'fr'}) }}">FR</a></li>
                 </ul>
             </span>
         </div>

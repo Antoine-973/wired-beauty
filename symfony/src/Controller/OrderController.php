@@ -16,8 +16,12 @@ class OrderController extends AbstractController
     #[Route('/', name: 'app_order')]
     public function index(ReportRepository $reportRepository): Response
     {
+        $user = $this->getUser();
+        $results = array_filter( $user->getBuyReportRequests()->toArray(), fn($buyReport) => $buyReport->getAccepted() );
+        $results = array_map( fn($buyReport) => $buyReport->getReport(), $results);
+
         return $this->render('order/index.html.twig', [
-            'reports' => $reportRepository->findAll(),
+            'reports' => $results
         ]);
     }
 }

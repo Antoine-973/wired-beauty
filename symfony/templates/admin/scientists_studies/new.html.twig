@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin.base.html.twig' %}
 
 {% block title %}New Study{% endblock %}
 
@@ -7,7 +7,7 @@
 
     {{ form_start(form) }}
         {{ form_widget(form) }}
-        <button class="btn">{{ button_label|default('Add') }}</button>
+        <button class="btn wb-btn-primary">{{ button_label|default('Add') }}</button>
     {{ form_end(form) }}
 
     <a href="{{ path('app_scientists_studies_index') }}">back to list</a>

@@ -1,0 +1,38 @@
+.wb-btn-primary {
+  background-color: $light_green;
+  border: solid 1px $light_green;
+  border-radius: 14px;
+  color: white;
+  padding: 5px 12px;
+
+  transition: background-color 200ms linear;
+
+  &:hover {
+    background-color: white;
+    border-color: $light_green;
+    color: $light_green;
+    text-decoration: none;
+  }
+}
+
+.wb-btn-edit {
+  background-color: $edit_green;
+  border-radius: 14px;
+  color: white;
+  padding: 5px 12px;
+
+  &:hover {
+    color: white !important;
+  }
+}
+
+.wb-btn-delete {
+  background-color: $delete_red;
+  border-radius: 14px;
+  color: white;
+  padding: 5px 12px;
+
+  &:hover {
+    color: white !important;
+  }
+}

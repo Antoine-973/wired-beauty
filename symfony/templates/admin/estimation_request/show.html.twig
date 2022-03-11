@@ -1,0 +1,40 @@
+{% extends 'admin.base.html.twig' %}
+
+{% block title %}{{ 'estimation request'|trans|capitalize }}{% endblock %}
+
+{% block body %}
+    <h1>Estimation Request</h1>
+
+    <table class="table">
+        <tbody>
+        <tr>
+            <th scope="col">{{ 'First Name'|trans }}</th>
+            <td>{{ estimation_request.firstName }}</td>
+        </tr>
+        <tr>
+            <th scope="col">{{ 'Last Name'|trans }}</th>
+            <td>{{ estimation_request.lastName }}</td>
+        </tr>
+        <tr>
+            <th scope="col">{{ 'Email'|trans }}</th>
+            <td>{{ estimation_request.email }}</td>
+        </tr>
+        <tr>
+            <th scope="col">{{ 'Phone'|trans }}</th>
+            <td>{{ estimation_request.phone }}</td>
+        </tr>
+        <tr>
+            <th scope="col">{{ 'Company'|trans }}</th>
+            <td>{{ estimation_request.company }}</td>
+        </tr>
+        <tr>
+            <th scope="col">{{ 'Message'|trans }}</th>
+            <td>{{ estimation_request.message }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_admin_estimation_request_index') }}">back to list</a>
+
+    {{ include('admin/estimation_request/_delete_form.html.twig') }}
+{% endblock %}

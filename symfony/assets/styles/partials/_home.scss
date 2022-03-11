@@ -1,0 +1,120 @@
+
+#about-cover {
+  overflow: hidden;
+
+  div:first-child {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 600px;
+  }
+
+  div:last-child {
+    height: 600px;
+
+    img {
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+}
+
+.space {
+  height: 80px;
+}
+
+.list-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 300px;
+}
+
+
+.team-card {
+
+  &:first-child {
+    border-right: solid 1px $dark_green;
+  }
+
+  .team-desc {
+    padding-top: 20px !important;
+  }
+}
+
+#mapo-open {
+  transform: translateY(80%);
+}
+
+#loginPage {
+  form {
+    width: 30vw;
+  }
+
+  img {
+    //max-height: 50vh;
+    object-fit: cover;
+  }
+}
+
+#validation-studies{
+  width: 100%;
+
+  .validation-study-item{
+    display: flex;
+    width: 410px;
+    height: 200px;
+    overflow: hidden;
+    justify-content: center;
+    justify-items: center;
+    border: 1px solid $dark_green;
+    margin-bottom: 10px;
+    width: 70% !important;
+
+    .study-image{
+      height: 100%;
+      overflow: hidden;
+      border-right: 1px solid $dark_green;
+
+      img{
+        aspect-ratio: 16/9;
+        height: 100%;
+        /*width: 100%;
+        height: 100%;*/
+        object-fit: cover;
+      }
+    }
+
+    .study-data{
+      padding: 20px 20px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      h2{
+        font-size: 20px;
+        font-weight: bolder;
+        color: #13667A;
+      }
+
+      *{
+        font-size: 1rem;
+        font-weight: 400;
+      }
+
+      .study-data-button{
+        width: 100%;
+        text-align: end;
+      }
+
+    }
+
+  }
+}
+
+#motion-design-player {
+  overflow: hidden;
+  width: 50vw;
+  border-radius: 20px;
+}

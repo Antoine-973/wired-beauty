@@ -1,0 +1,39 @@
+{% extends 'admin.base.html.twig' %}
+
+{% block title %}BuyReportRequest index{% endblock %}
+
+{% block body %}
+    <h1>BuyReportRequest index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>actions</th>
+                <th>Accepted</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for buy_report_request in buy_report_requests %}
+            <tr>
+                <td>{{ buy_report_request.report.title }}</td>
+                <td>
+                    {%  if not buy_report_request.accepted %}
+                            <a class="wb-btn-primary" href="{{ path('app_admin_buy_report_request_accept', {'id': buy_report_request.id}) }}">Accept</a>
+                            <a class="wb-btn-delete" href="{{ path('app_admin_buy_report_request_deny', {'id': buy_report_request.id}) }}">Deny</a>
+                    {% else %}
+                        <span>No action</span>
+                    {% endif %}
+
+                </td>
+                <td>{{ buy_report_request.accepted ? 'Accepted' : 'Pending' }}</td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="2">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

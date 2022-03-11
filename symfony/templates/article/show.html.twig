@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'Article'|trans|capitalize }}{% endblock %}
+
+{% block body %}
+    <div class="w-100 p-3 mx-auto">
+        <div class="text-center p-5">
+            <div>
+                <h1 class="wb-text-48">{{ 'Title'|trans }}</h1>
+                <div>
+                    <a class="mt-3 ml-5" href="{{ path('app_article_index') }}">{{ 'Back to list'|trans }}</a>
+                    {% if is_granted('ROLE_ADMIN') %}
+                        <a class="btn wb-btn-edit"
+                           href="{{ path('app_article_edit', {'slug': article.slug}) }}">{{ 'edit'|trans }}</a>
+                        {{ include('article/_delete_form.html.twig') }}
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="w-100 p-3 mx-auto">
+                {{ article.content | raw }}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

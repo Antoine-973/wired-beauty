@@ -1,0 +1,39 @@
+#template-builder{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 40px 0px;
+  h2{
+    font-size: 48px;
+    margin-bottom: 40px;
+  }
+}
+
+.report-maker-btn{
+  width: fit-content;
+  background-color: #13667a;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  color: white;
+  padding: 5px 12px;
+  outline: none;
+  font-size: 14px;
+}
+
+.report-maker-btn-empty{
+  width: fit-content;
+  background-color: white;
+  border: 1px solid #13667a;
+  border-radius: 14px;
+  color: #13667a;
+  padding: 5px 12px;
+  outline: none;
+  font-size: 14px;
+}
+
+.report-maker-input{
+  padding: 10px 20px;
+}

@@ -1,0 +1,102 @@
+html {
+  height: 100vh;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover, &:focus {
+    color: inherit !important;
+    text-decoration: underline;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lausanne Regular", sans-serif;
+}
+
+header {
+  position: fixed;;
+  top: 0;
+  left: 0;
+  height: 60px;
+  background-color: white;
+  z-index: 2;
+}
+
+body {
+  min-height: 100%;
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 140px;
+}
+
+.framed {
+  border: solid 1px $dark_green;
+}
+
+.framed-t {
+  border-top: solid 1px $dark_green;
+}
+
+.framed-b {
+  border-bottom: solid 1px $dark_green;
+}
+
+.framed-l {
+  border-left: solid 1px $dark_green;
+}
+
+.framed-r {
+  border-right: solid 1px $dark_green;
+}
+
+footer {
+  height: 140px;
+  position: absolute;
+  bottom: 0;
+
+  div {
+    flex-basis: 25%;
+  }
+}
+
+.accordion-button {
+  &:focus {
+    box-shadow: none;
+  }
+
+  &:not(.collapsed) {
+    color: white !important;
+
+    &::after {
+      filter: grayscale(100%) invert(100%);
+    }
+
+    background-color: $light_green;
+  }
+}
+
+.modal-dialog {
+  max-width: 100vw;
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 0;
+}
+
+.modal-backdrop {
+  width: 100% !important;
+}
+
+ul.dropdown-menu {
+  min-width: fit-content;
+}
+
+.dropdown-item:active {
+  background-color: white !important;
+}

@@ -1,0 +1,13 @@
+{% extends 'admin.base.html.twig' %}
+
+{% block title %}{{ 'Edit study'|trans|capitalize }}{% endblock %}
+
+{% block body %}
+    <h1>{{ 'Edit study'|trans }}</h1>
+
+    {{ include('admin/scientists_studies/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_scientists_studies_index') }}">back to list</a>
+
+    {{ include('admin/scientists_studies/_delete_form.html.twig') }}
+{% endblock %}

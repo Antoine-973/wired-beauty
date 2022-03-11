@@ -1,0 +1,40 @@
+{% extends 'admin.base.html.twig' %}
+
+{% block title %}{{ 'Studies'|trans|capitalize }}{% endblock %}
+
+{% block body %}
+    <h1>{{ 'Studies'|trans }}</h1>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Description</th>
+            <th scope="col">Link</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for study in studies %}
+            <tr>
+                <td>{{ study.title }}</td>
+                <td>{{ study.description|length > 30 ? study.description|slice(0, 28) ~ '...' : study.description }}</td>
+                <td>{% if study.path %}
+                        <a href="{{ vich_uploader_asset(study, 'file') }}">Link</a>
+                    {% else %}
+                        Unknown
+                    {% endif %}
+                <td>
+                    <a class="wb-btn-primary"
+                       href="{{ path('app_scientists_studies_show', {'id': study.id}) }}">show</a>
+                    <a class="wb-btn-edit" href="{{ path('app_scientists_studies_edit', {'id': study.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <a class="wb-btn-primary btn" href="{{ path('app_scientists_studies_new') }}">Add a new study</a>
+
+{% endblock %}

@@ -1,0 +1,116 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ "home"|trans|capitalize }}{% endblock %}
+
+{% block body %}
+    <div class="row w-100 align-items-center py-3">
+        <div class="col-8">
+            <img src="/images/home-cover.png" alt="cover" class="w-100"/>
+        </div>
+        <div class="col-4">
+            <h1 class="text-uppercase wb-text-48">
+                {{ 'we research skincare'|trans }}
+            </h1>
+            <p>
+                {{ 'We are looking for skin care !
+                WIRED BEAUTY is a new datadriven market research company dedicated to cosmetic laboratories.'|trans }}
+            </p>
+            <a href="{{ path('about_story_index') }}" class="wb-btn-primary text-uppercase">{{ 'about us'|trans }}</a>
+        </div>
+    </div>
+    <div class="d-flex framed-t framed-b">
+        <div class="d-flex flex-column justify-content-center align-items-center p-5">
+            <img src="/images/icons/hourglass.svg" alt="" class="mb-3" height="80">
+            <h2 class="text-uppercase wb-text-secondary">{{ 'speed of study'|trans }}</h2>
+            <p>{{ 'Save time with faster consumer testing and real time tracking of your study. We remain flexible on the
+                duration of the test'|trans }}</p>
+        </div>
+        <div class="d-flex flex-column justify-content-center align-items-center p-5 framed-l framed-r">
+            <img src="/images/icons/users.svg" alt="" class="mb-3" height="80">
+            <h2 class="text-uppercase wb-text-secondary">{{ 'reliability'|trans }}</h2>
+            <p>{{ 'Gain reliability with a larger panel of consumers who will test your products so that your studies are
+                more credible to your audience.'|trans }}</p>
+        </div>
+        <div class="d-flex flex-column justify-content-center align-items-center p-5">
+            <img src="/images/icons/coin.svg" alt="" class="mb-3" height="80">
+            <h2 class="text-uppercase wb-text-secondary">{{ 'attractive prices'|trans }}</h2>
+            <p>{{ 'Our reports offer both qualitative and quantitative results without taking up a significant portion of
+                your budget'|trans }}</p>
+        </div>
+    </div>
+    <div class="text-center p-5 framed-b">
+        <h2 class="text-uppercase mb-5">{{ 'customers'|trans }}</h2>
+        <div class="row w-50 mx-auto mb-5 align-items-center">
+            <div class="col-4">
+                <img class="p-3" src="/images/logos/lvmh.svg" alt="LVMH" width="200">
+            </div>
+            <div class="col-4">
+                <img class="p-3" src="/images/logos/loreal.svg" alt="L'Oréal" width="250">
+            </div>
+            <div class="col-4">
+                <img class="p-3" src="/images/logos/channel.svg" alt="Channel" width="120">
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center p-5 mb-5 w-75 mx-auto">
+        <h2 class="text-uppercase mb-5">faq</h2>
+        <div class="accordion" id="accordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        {{ 'Why choose Wired Beauty for your clinical study?'|trans }}
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                     data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p class="text-start">
+                            {{ "Wired Beauty offers you qualitative and quantitative data, with real-time monitoring.
+                            You will also have the testers' feedback on your product."|trans }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        {{ "What is Wired Beauty's technology?"|trans }}
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                     data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p class="text-start">
+                            {{ "Wired Beauty asks testers to place patches on 2 cheeks that are not treated in the same way,
+                            these results are sent to a connected box that receives the data, which is sent back to the
+                            application in the user's smartphone. This data automatically generates reports that
+                            scientists can consult."|trans }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        {{ "Who are the founders of Wired Beauty?"|trans }}
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                     data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p class="text-start">
+                            {{ "Stanislas Vandier Entrepreneur in dermo-cosmetics and digital with 10 years of experience at
+                            L'Oréal in marketing and business unit management & Sophie La Tanneur More than 20 years of
+                            FMCG corporate life at Colgate-Palmolive & L'Oréal in marketing and general management
+                            positions in Europe."|trans }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

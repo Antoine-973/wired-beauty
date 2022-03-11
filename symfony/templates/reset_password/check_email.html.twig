@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'Password Reset Email Sent'|trans|capitalize }}{% endblock %}
+
+{% block body %}
+    <div class="row w-100 p-0 m-0" id="loginPage">
+        <div class="col-6 p-0 d-flex justify-content-center align-items-center">
+            <div>
+                {{ 'If an account matching your email exists, then an email was just sent that contains a link that you can use to reset your password. This link will expire in'|trans }}
+                {{ resetToken.expirationMessageKey|trans(resetToken.expirationMessageData, 'ResetPasswordBundle') }}.
+
+                {{ 'If you don\'t receive an email please check your spam folder or'|trans }}
+                <a href="{{ path('app_forgot_password_request') }}">{{ 'try again'|trans }}</a>.
+
+                <div class="mt-4 d-flex align-items-center justify-content-between">
+                    <a class="btn wb-btn-primary" href="{{ path('home_index') }}">Back to home</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 p-0">
+            <img src="/images/abstract-hex.png" alt="cover" class="w-100"/>
+        </div>
+    </div>
+{% endblock %}

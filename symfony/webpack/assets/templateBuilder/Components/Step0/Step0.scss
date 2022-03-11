@@ -1,0 +1,47 @@
+.report-step-0{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .report-maker-input{
+        background-color: #E6EAEB;
+    }
+
+    .report-import-file{
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        margin-right: 5px;
+
+        .report-importer-zone{
+            border: 1px dashed black;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 20px;
+            background-color: #E7F0F2;
+            height: 190px;
+            overflow: hidden;
+        }
+    }
+
+    .report-data{
+        width: 30%;
+        margin-left: 5px;
+        display: flex;
+        flex-direction: column;
+
+        input, textarea, select{
+            margin-bottom: 20px;
+            resize: none;
+            outline: none;
+        }
+
+        textarea{
+            height: 100px;
+        }
+
+        button{
+            align-self: flex-end;
+        }
+    }
+}

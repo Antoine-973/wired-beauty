@@ -1,0 +1,28 @@
+.pdf-content{
+    .pdf-page{
+        height: 742px;
+        width: 470px;
+        //border: 1px solid red;
+    }
+
+    h1, h2, h3, p{
+        font-family: "Montserrat", sans-serif;
+    }
+
+    p{
+        font-size: 10px;
+        font-weight: lighter;
+    }
+
+}
+
+.template-pdf{
+   *{
+    font-family: "Montserrat", sans-serif;
+   }
+
+   p{
+        color: #082C36;
+        font-weight: lighter;
+   }
+}

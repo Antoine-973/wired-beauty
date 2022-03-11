@@ -1,0 +1,37 @@
+{% extends 'admin.base.html.twig' %}
+
+{% block title %}{{ 'Users'|trans|capitalize }}{% endblock %}
+
+{% block body %}
+    <h1>{{ 'Users'|trans }}</h1>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">{{ 'Email'|trans }}</th>
+            <th scope="col">{{ 'Roles'|trans }}</th>
+            <th scope="col">{{ 'actions'|trans }}</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.email }}</td>
+                <td>{{ user.roles ? user.roles|json_encode : '' }}</td>
+                <td>
+                    <a class="wb-btn-primary btn"
+                       href="{{ path('app_user_show', {'id': user.id}) }}">{{ 'show'|trans }}</a>
+                    <a class="wb-btn-edit btn"
+                       href="{{ path('app_user_edit', {'id': user.id}) }}">{{ 'edit'|trans }}</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">{{ 'No records found'|trans }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a class="wb-btn-primary btn" href="{{ path('app_user_new') }}">{{ 'Create new'|trans }}</a>
+{% endblock %}

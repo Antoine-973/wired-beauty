@@ -1,0 +1,93 @@
+<header class="d-flex justify-content-between align-items-center framed-b w-100">
+    <div>
+        <a href="/" class="text-uppercase wb-text-primary ms-3 text-font-primary">
+            <img src="/images/wb-logo.svg" alt="Wired Beauty"/>
+        </a>
+    </div>
+    <div class="d-flex align-items-center">
+        <div class="p-3">
+            <div class="dropdown d-inline">
+                <a class="wb-text-primary d-inline dropdown-toggle mx-3 text-uppercase wb-text-14 nav-link dropdown-toggle"
+                   href="#"
+                   data-bs-toggle="dropdown">
+                    {{ 'about us'|trans }}
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li>
+                        <a class="wb-text-14 dropdown-item text-uppercase"
+                           href="{{ path("about_story_index") }}">{{ 'our story'|trans }}</a></li>
+                    <li>
+                        <a class="wb-text-14 dropdown-item text-uppercase"
+                           href="{{ path("about_beliefs_index") }}">{{ 'our vision'|trans }}</a></li>
+                    <li>
+                        <a class="wb-text-14 dropdown-item text-uppercase"
+                           href="{{ path("about_team_index") }}">{{ 'our team'|trans }}</a></li>
+                    <li>
+                        <a class="wb-text-14 dropdown-item text-uppercase">{{ 'interview of founders'|trans }}</a></li>
+                </ul>
+            </div>
+            <span class="dropdown">
+                <a class="wb-text-primary d-inline dropdown-toggle mx-3 text-uppercase wb-text-14 nav-link dropdown-toggle"
+                   href="#"
+                   data-bs-toggle="dropdown">
+                    {{ 'lab'|trans }}
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="wb-text-14 dropdown-item text-uppercase"
+                           href="{{ path("factory_technologies_index") }}">{{ "our technologies"|trans }}</a></li>
+                    <li><a class="wb-text-14 dropdown-item text-uppercase"
+                           href="{{ path("factory_services_index") }}">{{ 'studies services'|trans }}</a></li>
+                    <li><a class="wb-text-14 dropdown-item text-uppercase"
+                           href="{{ path("factory_validation_index") }}">{{ 'scientific validation'|trans }}</a></li>
+                </ul>
+            </span>
+            <a href="{{ path("app_article_index") }}" class="mx-3 text-uppercase wb-text-14">{{ 'blog'|trans }}</a>
+            <a href="{{ path("estimation_index") }}"
+               class="mx-3 text-uppercase wb-btn-primary wb-text-14">{{ 'estimation'|trans }}</a>
+            {% if is_granted('ROLE_CLIENT') %}
+            <a href="{{ path("app_order") }}"
+               class="mx-3 text-uppercase wb-btn-primary wb-text-14">{{ 'order'|trans }}</a>
+            {% endif %}
+        </div>
+
+        <div class="framed-l p-3">
+            {% if app.user %}
+                <div class="d-inline dropdown">
+                    <a class="wb-text-primary d-inline dropdown-toggle mx-3 text-uppercase wb-text-14 nav-link dropdown-toggle"
+                       href="#"
+                       data-bs-toggle="dropdown">
+                        {{ "Hello"|trans }} {{ app.user.getFirstName() }}
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        {% if is_granted('ROLE_ADMIN') %}
+                            <li>
+                                <a class="wb-text-14 dropdown-item text-uppercase"
+                                   href="{{ path("app_admin_dashboard") }}">{{ 'dashboard'|trans }}</a>
+                            </li>
+                        {% endif %}
+                        <li>
+                            <a class="wb-text-14 dropdown-item text-uppercase"
+                               href="{{ path("app_logout") }}">{{ 'Logout'|trans }}</a>
+                        </li>
+                    </ul>
+                </div>
+            {% else %}
+                <a href="{{ path("app_login") }}"><i class="fa-regular fa-user wb-text-primary"></i></a>
+            {% endif %}
+        </div>
+        <div class="framed-l p-3">
+            <span class="nav-item dropdown">
+                <a class="dropdown-toggle" href="#" id="dropdown-language" role="button"
+                   data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{ app.request.locale|upper }}
+                </a>
+                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-language">
+                    <li><a class="dropdown-item"
+                           href="{{ path('home_index', {_locale: 'en'}) }}">EN</a></li>
+                    <li><a class="dropdown-item"
+                           href="{{ path('home_index', {_locale: 'fr'}) }}">FR</a></li>
+                </ul>
+            </span>
+        </div>
+    </div>
+</header>

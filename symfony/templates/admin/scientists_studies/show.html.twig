@@ -1,0 +1,32 @@
+{% extends 'admin.base.html.twig' %}
+
+{% block title %}{{ 'Study'|trans|capitalize }}{% endblock %}
+
+{% block body %}
+    <h1>{{ 'Study'|trans }}</h1>
+
+    <table class="table">
+        <tbody>
+        <tr>
+            <th scope="col">{{ 'Title'|trans }}</th>
+            <td>{{ study.title }}</td>
+        </tr>
+        <tr>
+            <th scope="col">{{ 'Path'|trans }}</th>
+            <td>
+                <a href="{{ vich_uploader_asset(study, 'file') }}">Link</a>
+            </td>
+        </tr>
+        <tr>
+            <th scope="col">{{ 'Description'|trans }}</th>
+            <td>{{ study.description??'Empty' }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_scientists_studies_index') }}">Back to list</a>
+
+    <a class="wb-btn-edit btn" href="{{ path('app_scientists_studies_edit', {'id': study.id}) }}">edit</a>
+
+    {{ include('admin/scientists_studies/_delete_form.html.twig') }}
+{% endblock %}

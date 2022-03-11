@@ -1,0 +1,8 @@
+{{ form_start(form, {'attr': {'class': 'form-group'}}) }}
+    <button class="text-center wb-btn-primary">{{ button_label|default('Save') }}</button>
+    <div class="form-group">
+        <label for="article_title">Title</label>
+        {{ form_widget(form.title, {'attr': {'class': 'form-control'}}) }}
+    </div>
+        {{ form_widget(form.content, {'attr': {'class': 'form-control'}}) }}
+{{ form_end(form) }}

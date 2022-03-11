@@ -1,0 +1,84 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'scientific validation'|trans|capitalize }}{% endblock %}
+
+
+{% block body %}
+    <div class="row w-100 align-items-center m-0" id="about-cover">
+        <div class="col-4 p-0 d-flex justify-content-center align-items-center"
+             style="background-image: url('/images/hex-bg.png')">
+            <h1 class="text-uppercase wb-text-white">{{ 'scientific validation'|trans }}</h1>
+        </div>
+        <div class="col-8 p-0">
+            <img src="/images/abstract-sphere.png" alt="cover" class="w-100"/>
+        </div>
+    </div>
+
+    <div class="space framed-b framed-t d-flex justify-content-center align-items-center">
+        <h2 class="text-uppercase">{{ 'wired beauty scientific partners'|trans }}</h2>
+    </div>
+
+    <div class="framed-b p-5">
+        <div class="w-50 mx-auto">
+            <p>
+                {{ 'The Wired Beauty technology is the fruit of a scientific consortium uniting the founders of Wired
+                Beauty,
+                the APHP (Assistance Publique – Hôpitaux de Paris www.APHP.fr and the French Contract Research
+                Organization
+                (CRO), QIMA www.qima.fr'|trans }}
+            </p>
+            <p>
+                <strong>{{ 'TOGETHER THEY HAVE:'|trans }}</strong>
+            </p>
+            <p>
+                {{ 'Demonstrated the power of electrochemistry to decifer antioxydative performance on the skin
+                Proved that the Wired Beauty IOT nomadic lab can level with traditionnal chromatography test in less
+                than 1
+                minute (90% correlation)
+                Found that the Wired Beauty IOT nomadic lab device can beat TWELL tests
+                Miniaturized the Wired Beauty IOT nomadic device
+                Developped the interpretation of the signal algorythm within minutes'|trans }}
+            </p>
+        </div>
+        <div class="d-flex justify-content-around w-50 mx-auto mt-5">
+            {% if not app.user %}
+                <a href="{{ path('app_login') }}" class="wb-btn-primary text-uppercase">{{ 'read a study'|trans }}</a>
+            {% endif %}
+            <a href="{{ path('contact_index') }}"
+               class="wb-btn-primary text-uppercase">{{ 'fill in my study'|trans }}</a>
+        </div>
+    </div>
+
+    <div class="w-100 framed-t framed-b">
+        <img src="/images/lines.svg" alt="lines" class="w-100"/>
+    </div>
+
+    <div class="text-center my-5">
+        <h1 class="text-uppercase mb-5">
+            {{ 'Find out the latest studies'|trans }}
+        </h1>
+        <div id="validation-studies">
+            {% for study in studies %}
+                <div class="validation-study-item mx-auto">
+                    <div class="study-image ">
+                        <img src="{{ imgs[loop.index] }}" alt="report image"/>
+                    </div>
+                    <div class="study-data mx-auto">
+                        <h2>{{ study.title }}</h2>
+                        <p>{{ study.description }}</p>
+                        <div class="study-data-button mt-auto">
+                            {% if app.user %}
+                                <a class="wb-btn-primary text-uppercase"
+                                   href="{{ vich_uploader_asset(study, 'file') }}">{{ 'READ'|trans }}</a>
+                            {% else %}
+                                <a class="wb-btn-primary text-uppercase"
+                                   href="{{ path('app_login') }}">{{ 'LOGIN TO READ'|trans }}</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

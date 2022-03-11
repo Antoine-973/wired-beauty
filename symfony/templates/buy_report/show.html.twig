@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Report{% endblock %}
+
+{% block body %}
+    <h1>Report</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Title</th>
+                <td>{{ report.title }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ report.description }}</td>
+            </tr>
+            <tr>
+                <th>CreatedAt</th>
+                <td>{{ report.createdAt ? report.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Available</th>
+                <td>
+                {% if already_asked %}
+                    <p>ALREADY ASKED</p>
+                {% else %}
+                    <a href="{{ path('app_buy_report_request', {'id': report.id}) }}">ASK</a>
+                {% endif %}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_buy_report_index') }}">back to list</a>
+
+{% endblock %}

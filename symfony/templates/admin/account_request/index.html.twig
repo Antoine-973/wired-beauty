@@ -1,0 +1,46 @@
+{% extends 'admin.base.html.twig' %}
+
+{% block title %}{{ 'AccountRequest'|trans|capitalize }}{% endblock %}
+
+{% block body %}
+    <h1>{{ 'Account Request'|trans }}</h1>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">{{ 'Firstname'|trans }}</th>
+            <th scope="col">{{ 'Lastname'|trans }}</th>
+            <th scope="col">{{ 'Email'|trans }}</th>
+            <th scope="col">{{ 'Phone'|trans }}</th>
+            <th scope="col">{{ 'Company'|trans }}</th>
+            <th scope="col">{{ 'Role'|trans }}</th>
+            <th scope="col">{{ 'Message'|trans }}</th>
+            <th scope="col">{{ 'actions'|trans }}</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for account_request in account_requests %}
+            <tr>
+                <td>{{ account_request.firstName }}</td>
+                <td>{{ account_request.lastName }}</td>
+                <td>{{ account_request.email }}</td>
+                <td>{{ account_request.phone }}</td>
+                <td>{{ account_request.company }}</td>
+                <td>{{ account_request.type }}</td>
+                <td>{{ account_request.message }}</td>
+                <td>
+                    <a class="wb-btn-primary btn"
+                       href="{{ path('app_admin_account_request_show', {'id': account_request.id}) }}">{{ 'show'|trans }}</a>
+                    {{ include('admin/account_request/_validate_form.html.twig') }}
+                    {{ include('admin/account_request/_delete_form.html.twig') }}
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="10">{{ 'No requests found'|trans }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}
